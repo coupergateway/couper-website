@@ -1,0 +1,70 @@
+name: website
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: build website
+        run: npm run build
+
+      - name: integration tests
+        working-directory: e2e
+        run: |
+          docker run -d --pull --name ${{ github.ref }} -h couper -v ${{ github.workspace }}/public:/public -e COUPER_LOG_LEVEL=debug -e COUPER_DEFAULT_PORT=4080 couper:latest
+          docker logs ${{ github.ref }} |head
+          docker run -d --name ${{ github.ref }}-chrome -h chrome --link ${{ github.ref }} selenium/standalone-chrome
+          npm run ci-e2e
+
+      - name: create artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: |
+            public
+          if-no-files-found: warn
+          retention-days: 2
+
+  deploy:
+    name: 'deploy via github pages'
+    runs-on: ubuntu-latest
+    needs:
+      - docs
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: 'dist-artifact'
+
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_COUPER_API_TOKEN }}
+          path: 'website'
+          repository: 'avenga/couper-website'
+          ref: 'public'
+
+      - run: rm -rf website/dist
+      - run: cp -RTv dist-artifact/ website/dist
+      - name: setup git && push
+        working-directory: './website'
+        run: |
+          git config user.name "couper-bot"
+          git config user.email "couperbot@gmail.com"
+          git add -A && git commit -m "Update website"
+          git push origin public

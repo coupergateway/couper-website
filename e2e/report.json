@@ -1,0 +1,186 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "couper.io",
+    "line": 1,
+    "id": "couper.io",
+    "tags": [],
+    "uri": "features/couper_io_de.feature",
+    "elements": [
+      {
+        "id": "couper.io;couper.io-in-german",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "couper.io in German",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/world.ts:124"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "couper.io is opened in \"de\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:88"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4022000000,
+              "error_message": "WebDriverError: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=88.0.4324.192)\n  (Driver info: chromedriver=88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}),platform=Mac OS X 10.15.7 x86_64)\n    at Object.checkLegacyResponse (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/error.js:546:15)\n    at parseHttpResponse (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:85:5)\nFrom: Task: WebDriver.navigate().to(http://localhost:8000/de/)\n    at thenableWebDriverProxy.schedule (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at Navigation.to (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/webdriver.js:1133:25)\n    at thenableWebDriverProxy.get (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/webdriver.js:988:28)\n    at /Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:89:16\n    at step (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:33:23)\n    at Object.next (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:14:53)\n    at /Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:4:12)\n    at World.<anonymous> (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:88:61)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "\"features\" is chosen in the top menu in \"de\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:154"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "\"subscriptions\" is chosen in the top menu in \"de\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:154"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "\"use-cases\" is chosen in the top menu in \"de\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:154"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/world.ts:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "couper.io",
+    "line": 1,
+    "id": "couper.io",
+    "tags": [],
+    "uri": "features/couper_io_en.feature",
+    "elements": [
+      {
+        "id": "couper.io;couper.io-in-english",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "couper.io in English",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/world.ts:124"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "couper.io is opened in \"en\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:88"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1836000000,
+              "error_message": "WebDriverError: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome=88.0.4324.192)\n  (Driver info: chromedriver=88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}),platform=Mac OS X 10.15.7 x86_64)\n    at Object.checkLegacyResponse (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/error.js:546:15)\n    at parseHttpResponse (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:85:5)\nFrom: Task: WebDriver.navigate().to(http://localhost:8000/en/)\n    at thenableWebDriverProxy.schedule (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at Navigation.to (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/webdriver.js:1133:25)\n    at thenableWebDriverProxy.get (/Users/marcel/projects/couper.io/e2e/node_modules/selenium-webdriver/lib/webdriver.js:988:28)\n    at /Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:89:16\n    at step (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:33:23)\n    at Object.next (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:14:53)\n    at /Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:4:12)\n    at World.<anonymous> (/Users/marcel/projects/couper.io/e2e/features/step_definitions/couper.ts:88:61)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "\"features\" is chosen in the top menu in \"en\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:154"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "\"subscriptions\" is chosen in the top menu in \"en\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:154"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "\"use-cases\" is chosen in the top menu in \"en\"",
+            "match": {
+              "location": "features/step_definitions/couper.ts:154"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/world.ts:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
