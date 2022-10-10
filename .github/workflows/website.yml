@@ -27,7 +27,7 @@ jobs:
       - name: integration tests
         working-directory: e2e
         run: |
-          docker run -d --name ${GITHUB_SHA::6} -h couper -v ${{ github.workspace }}/public:/public -e COUPER_LOG_LEVEL=debug -e COUPER_DEFAULT_PORT=4080 couper:latest
+          docker run -d --name ${GITHUB_SHA::6} -h couper -v ${{ github.workspace }}/public:/public -e COUPER_LOG_LEVEL=debug -e COUPER_DEFAULT_PORT=4080 avenga/couper
           docker logs ${GITHUB_SHA::6} |head
           docker run -d --name ${GITHUB_SHA::6}-chrome -h chrome --link ${GITHUB_SHA::6} selenium/standalone-chrome
           npm run ci-e2e
