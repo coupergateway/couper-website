@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
+      - name: Check out
+        uses: actions/checkout@v3
 
       - name: install dependencies
         run: npm ci
