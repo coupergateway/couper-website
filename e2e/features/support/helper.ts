@@ -1,6 +1,6 @@
-import { DRIVER } from './world'
-import { logging, WebElement, By, until } from 'selenium-webdriver'
-import { timeout } from './defaults'
+import {DRIVER} from './world'
+import {By, logging, until, WebElement} from 'selenium-webdriver'
+import {timeout} from './defaults'
 
 
 /**
@@ -41,8 +41,7 @@ export class Helper {
    * @memberof Helper
    */
   public static async getOneElement(selector: string): Promise<WebElement> {
-    const element = await DRIVER.wait(until.elementLocated(By.css(selector)), timeout, 'Element not found')
-    return element
+    return DRIVER.wait(until.elementLocated(By.css(selector)), timeout, 'Element not found');
   }
 
   /**
@@ -53,7 +52,6 @@ export class Helper {
    * @memberof Helper
    */
   public static async getXpathElement(selector: string): Promise<WebElement> {
-    const element = await DRIVER.wait(until.elementLocated(By.xpath(selector)), timeout, 'Element not found')
-    return element
+    return DRIVER.wait(until.elementLocated(By.xpath(selector)), timeout, 'Element not found');
   }
 }

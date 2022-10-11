@@ -4,20 +4,20 @@ import * as defaults from './defaults'
 
 // The browser to use with the selenium webdriver
 export const platform = process.env.PLATFORM || defaults.platform || 'unknown'
-export const testhost = process.env.TESTHOST || "http://localhost:4080"
-const seleniumRemoteUrl = process.env.SELENIUM_REMOTE_URL
+export const testHost = process.env.TESTHOST || "http://localhost:8080"
+const seleniumRemoteUrl = process.env.SELENIUM_REMOTE_URL || "unknown"
 
 /**
  * Current initialized driver for using with e2e tests.
  */
-export var DRIVER: ThenableWebDriver
+export let DRIVER: ThenableWebDriver
 export let scenarioName = "Initial Test " + new Date().getTime()
 
 /**
- * This class helps configuring the cucumber framework and selenium webdriver.
+ * This class helps to configure the cucumber framework and selenium webdriver.
  */
 class World {
-  public driver
+  public driver: any
   constructor() {
   }
 }
@@ -30,23 +30,26 @@ setDefaultTimeout(defaults.timeout)
 function buildLocalDriver() {
   const chromeCapabilities = Capabilities.chrome();
   chromeCapabilities.set('chromeOptions', {
-    'args': ['--headless', '--disable-gpu']
+    'args': [
+      '--no-sandbox',
+      '--headless',
+      '--disable-gpu',
+    ]
   });
-  if (platform === 'CHROME') {
-    return new Builder()
-      .withCapabilities(chromeCapabilities)
-      .forBrowser('chrome').build()
-  }
+
+  let builder: Builder = new Builder()
+    .withCapabilities(chromeCapabilities)
+    .forBrowser('chrome')
+
   if (platform === 'CI') {
-    return new Builder()
-      .usingServer(seleniumRemoteUrl)
-      .withCapabilities(chromeCapabilities)
-      .forBrowser('chrome').build()
+    builder = builder.usingServer(seleniumRemoteUrl)
   }
+
+  return builder.build()
 }
 
-function replaceUmlauts(word) {
-  const umlautMap = {
+function replaceUmlauts(word: string) {
+  const umlautMap: Record<string, string> = {
     '\u00dc': 'UE',
     '\u00c4': 'AE',
     '\u00d6': 'OE',
@@ -56,7 +59,7 @@ function replaceUmlauts(word) {
     '\u00df': 'ss',
   }
   return word
-    .replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, (a) => {
+    .replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, (a: string) => {
       const big = umlautMap[a.slice(0, 1)]
       return big.charAt(0) + big.charAt(1).toLowerCase() + a.slice(1)
     })
@@ -73,7 +76,7 @@ Before(function(scenario) {
   console.log("\n\n" + scenarioName)
   scenarioName = replaceUmlauts(scenarioName)
 
-  DRIVER = buildLocalDriver()
+  DRIVER = buildLocalDriver() || new Builder().build()
   return Promise.resolve()
 })
 

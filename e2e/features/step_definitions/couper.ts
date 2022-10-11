@@ -1,7 +1,7 @@
 import { Then, When, Given } from 'cucumber'
 import { Key, By } from 'selenium-webdriver'
 import * as chai from 'chai'
-import { DRIVER, platform as env, testhost } from '../support/world'
+import { DRIVER, platform as env, testHost } from '../support/world'
 
 export const timestamp = new Date().getTime().toString()
 export const controlKey = (process.platform === 'darwin' && env.indexOf('BROWSERSTACK') < 0) ? Key.COMMAND : Key.CONTROL
@@ -14,13 +14,13 @@ export async function getElement(selector: string, type: string = 'xpath', timeo
         let found = await DRIVER.findElements(By.xpath(selector))
         return found.length > 0;
       }, timeout, `${selector} could not be found`)
-      return await DRIVER.findElement(By.xpath(selector))
+      return DRIVER.findElement(By.xpath(selector));
     case 'css':
       await DRIVER.wait(async function (DRIVER) {
         let found = await DRIVER.findElements(By.css(selector));
         return found.length > 0;
       }, timeout, `${selector} could not be found`)
-      return await DRIVER.findElement(By.css(selector))
+      return DRIVER.findElement(By.css(selector));
     default:
       break;
   }
@@ -45,14 +45,13 @@ export async function elementNotPresent(selector: string, type: string = 'xpath'
 }
 
 export async function getAmountOfElements(xpath: string) {
-  return await (await DRIVER.findElements(By.xpath(xpath))).length
+  return (await DRIVER.findElements(By.xpath(xpath))).length;
 }
 
 export async function compareElementText(xpath: string, expectedText: string, expected: boolean = true, message?: string) {
   const element = await getElement(xpath)
 
-  let elementText: string
-  elementText = await element.getAttribute('innerText')
+  const elementText = await element?.getAttribute('innerText')
 
   if (expected === false) {
     return chai.expect(elementText, message).to.not.equal(expectedText)
@@ -63,19 +62,20 @@ export async function compareElementText(xpath: string, expectedText: string, ex
 
 export async function compareElementHref(xpath: string, href: string, expected: boolean = true, message?: string) {
   const element = await getElement(xpath)
-  return chai.expect(await element.getAttribute('href'), message).to.include(href)
+  return chai.expect(await element?.getAttribute('href'), message).to.include(href)
 }
 
 export async function elementIsChecked(xpath: string, expected: boolean, message?: string) {
-  const checked = await (await getElement(xpath)).isSelected()
+  const element = await getElement(xpath)
+  const checked = await element?.isSelected()
   chai.expect(checked, message).to.equal(expected)
   return checked
 }
 
 export async function setTextToElement(xpath: string, value: string) {
   const input = await getElement(xpath)
-  await input.sendKeys(controlKey, "A")
-  await input.sendKeys(value)
+  await input?.sendKeys(controlKey, "A")
+  await input?.sendKeys(value)
   await DRIVER.sleep(50)
 }
 
@@ -83,7 +83,7 @@ export async function clickButton(xpath: string) {
   const element = await getElement(xpath)
   await DRIVER.executeScript('arguments[0].scrollIntoView({block: "center"})', (element))
   await DRIVER.sleep(100)
-  await element.click()
+  await element?.click()
   await DRIVER.sleep(50)
 }
 
@@ -93,10 +93,10 @@ const inspect = async(element: string[]) => {
 
   getElement(xpath)
   if (text) {
-    compareElementText(xpath, text)
+    await compareElementText(xpath, text)
   }
   if (href) {
-    compareElementHref(xpath, href)
+    await compareElementHref(xpath, href)
   }
 }
 
@@ -169,7 +169,7 @@ const elementSelectors = {
 
 
 Given('couper.io is opened in {string} with complete metadata', async (lang: string) => {
-  await DRIVER.get(`${testhost}/${lang}/`)
+  await DRIVER.get(`${testHost}/${lang}/`)
 
   elementSelectors.meta.forEach(async (xpath) => await getElement(xpath))
 
