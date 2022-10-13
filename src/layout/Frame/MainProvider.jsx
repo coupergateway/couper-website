@@ -24,7 +24,7 @@ export default function MainProvider({ children }) {
   }, [init, path])
 
   useEffect(() => {
-    axios.get(`${window.location.origin}/api/github/about`)
+    axios.get(`https://api.github.com/repos/avenga/couper/releases/latest`)
       .then((response) => setChangelogData(response.data))
       .catch((response) => setChangelogError(response.toJSON().message))
       .finally(() => setChangelogLoading(false))
