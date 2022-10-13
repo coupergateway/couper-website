@@ -56,17 +56,13 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_COUPER_API_TOKEN }}
           path: 'website'
           repository: 'avenga/couper-website'
-          ref: 'public'
 
       - run: rm -rf website/dist
       - run: cp -RTv dist-artifact/ website/dist
-      - name: setup git && push
-        working-directory: './website'
-        run: |
-          git config user.name "couper-bot"
-          git config user.email "couperbot@gmail.com"
-          git add -A && git commit -m "Update website"
-          git push origin public
+      - run: cp website/{robots.txt,CNAME} website/dist
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: website/dist # The folder the action should deploy.
