@@ -49,20 +49,20 @@ jobs:
     needs:
       - build
     steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_COUPER_API_TOKEN }}
+          repository: 'avenga/couper-website'
+
       - uses: actions/download-artifact@v2
         with:
           name: dist
-          path: 'dist-artifact'
+          path: 'dist'
 
-      - uses: actions/checkout@v3
-        with:
-          path: 'website'
-          repository: 'avenga/couper-website'
-
-      - run: rm -rf website/dist
-      - run: cp -RTv dist-artifact/ website/dist
-      - run: cp website/{robots.txt,CNAME} website/dist
+      - run: cp {robots.txt,CNAME} dist/
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: website/dist # The folder the action should deploy.
+          folder: dist # The folder the action should deploy.
+          token: ${{ secrets.GH_COUPER_API_TOKEN }}
+          git-config-name: 'couper-bot'
