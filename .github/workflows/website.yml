@@ -59,5 +59,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        artifact_name: dist
         uses: actions/deploy-pages@v1
+        with:
+          artifact_name: dist
