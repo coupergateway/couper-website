@@ -37,11 +37,9 @@ jobs:
 #          npm run ci-e2e
 
       - name: create artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: dist
-          path: |
-            public
+          path: public
           if-no-files-found: warn
           retention-days: 2
 
@@ -60,5 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        with:
-          artifact_name: dist
