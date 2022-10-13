@@ -66,3 +66,4 @@ jobs:
           folder: dist # The folder the action should deploy.
           token: ${{ secrets.GH_COUPER_API_TOKEN }}
           git-config-name: 'couper-bot'
+          git-config-email: '110540211+couper-bot@users.noreply.github.com'
