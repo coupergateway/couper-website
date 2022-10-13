@@ -24,7 +24,7 @@ jobs:
       - name: build website
         run: npm run build
 
-      - run: cp {robots.txt,CNAME} dist/
+      - run: cp {robots.txt,CNAME} public/
 
 #      - name: integration tests
 #        working-directory: e2e
