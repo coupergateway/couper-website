@@ -49,7 +49,7 @@ jobs:
     name: 'Deploy 🚀'
     environment:
       name: github-pages
-      url: 'https://couper.io/'
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
@@ -58,5 +58,6 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: dist
+        id: deployment
+        artifact_name: dist
         uses: actions/deploy-pages@v1
