@@ -52,6 +52,10 @@ const DocsEn = () => {
           <Typography.Paragraph>
             Couper does not need any special development skills and offers easy configuration and integration.
           </Typography.Paragraph>
+          <br/>
+          <Cta href='https://docs.couper.io/'>
+            Visit docs.couper.io
+          </Cta>
         </Structure.ContainerHalfLeft>
         <Structure.Distance />
         <Structure.Distance />
