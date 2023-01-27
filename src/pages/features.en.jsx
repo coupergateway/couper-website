@@ -348,7 +348,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://marketplace.visualstudio.com/items?itemName=AvengaGermanyGmbH.couper'
+                  href='https://marketplace.visualstudio.com/items?itemName=couper.couperconf'
                 >
                   Get the Couper Extension from the Visual Studio Marketplace
                 </a>
