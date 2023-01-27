@@ -158,7 +158,7 @@ const DocsEn = () => {
                 The result is easy to read, yet powerful and expressive.
               </Typography.Paragraph>
               <Typography.Paragraph>
-                <Cta href='https://marketplace.visualstudio.com/items?itemName=AvengaGermanyGmbH.couper'>
+                <Cta href='https://marketplace.visualstudio.com/items?itemName=couper.couperconf'>
                   Get VS Code Extension
                 </Cta>
               </Typography.Paragraph>
