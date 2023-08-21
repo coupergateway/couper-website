@@ -20,7 +20,6 @@ import Couper from '../assets/images/Couper'
 import Experience from '../assets/icons/Experience'
 import OpenSource from '../assets/icons/OpenSource'
 import Support from '../assets/icons/Support'
-import Trusted from '../assets/icons/Trusted'
 
 const IndexEn = () => {
   const { setTitle } = useContext(mainContext)
@@ -264,42 +263,6 @@ const IndexEn = () => {
           <Cta to='/en/use-cases/'>
             Explore Use Cases
           </Cta>
-        </Structure.ContainerHalf>
-      </Structure.Wrapper>
-
-      <Structure.Wrapper>
-        <Structure.ContainerHalf>
-          <Typography.H2>
-            Trusted by
-          </Typography.H2>
-          <Structure.Distance />
-          <Typography.Paragraph>
-            Many of our longstanding customers rely on Couper for their digital strategy.*
-          </Typography.Paragraph>
-        </Structure.ContainerHalf>
-        <Structure.Distance />
-        <Structure.Distance />
-        <Structure.Distance />
-        <Structure.Distance />
-        <Brands />
-        <Structure.Distance />
-        <Structure.Distance />
-        <Structure.Distance />
-        <Structure.Distance />
-        <Structure.ContainerHalf>
-          <Typography.Paragraph color='gray'>
-            * Couper and
-            {' '}
-            <a
-              rel='noopener noreferrer'
-              target='_blank'
-              href='https://sevenval.gitbook.io/flat/'
-            >
-              FLAT
-            </a>
-            {' '}
-            (Couper&apos;s predecessor).
-          </Typography.Paragraph>
         </Structure.ContainerHalf>
       </Structure.Wrapper>
 
