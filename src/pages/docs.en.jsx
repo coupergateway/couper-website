@@ -79,9 +79,9 @@ const DocsEn = () => {
           <Typography.Paragraph>
             Couper is available as
             {' '}
-            <a href='https://github.com/avenga/couper-examples/tree/master/docker'>container image</a>
+            <a href='https://github.com/coupergateway/couper-examples/tree/master/docker'>container image</a>
             {' '}
-            or as binary from the <a href='https://github.com/avenga/couper/releases/latest'>latest release on GitHub.</a>
+            or as binary from the <a href='https://github.com/coupergateway/couper/releases/latest'>latest release on GitHub.</a>
             <br />
 
             To download/install Couper with
@@ -90,7 +90,7 @@ const DocsEn = () => {
             {' '}
             open your terminal and execute:
             <Structure.Distance />
-            <CodeBlock language='ssh'>$ brew tap avenga/couper && brew install couper</CodeBlock>
+            <CodeBlock language='ssh'>$ brew tap coupergateway/couper && brew install couper</CodeBlock>
             <Structure.Distance />
             <br />
             Couper needs a configuration file to know what to do.
@@ -134,11 +134,11 @@ const DocsEn = () => {
             {' '}
             to stop process. Visit the Couper
             {' '}
-            <a href='https://github.com/avenga/couper/tree/master/docs'>repository</a>
+            <a href='https://github.com/coupergateway/couper/tree/master/docs'>repository</a>
             {' '}
             for reference or go on with the
             {' '}
-            <a href='https://github.com/avenga/couper-examples'>examples</a>
+            <a href='https://github.com/coupergateway/couper-examples'>examples</a>
             .
           </Typography.Paragraph>
         </Structure.Container>
@@ -175,7 +175,7 @@ const DocsEn = () => {
                 group them in APIs, and protect them with JSON Web Tokens.
               </Typography.Paragraph>
               <Typography.Paragraph>
-                <Cta href='https://github.com/avenga/couper-examples/tree/master/'>
+                <Cta href='https://github.com/coupergateway/couper-examples/tree/master/'>
                   Full Example Repository
                 </Cta>
               </Typography.Paragraph>
@@ -236,7 +236,7 @@ const DocsEn = () => {
               </Structure.Container>
             </Breakpoints.OnlyOnMobile>
             <Structure.Distance />
-            <Cta href='https://github.com/avenga/couper-examples/tree/master/simple-fileserving'>
+            <Cta href='https://github.com/coupergateway/couper-examples/tree/master/simple-fileserving'>
               Browse Full Example
             </Cta>
           </Structure.Container>
@@ -271,7 +271,7 @@ const DocsEn = () => {
               </Structure.Container>
             </Breakpoints.OnlyOnMobile>
             <Structure.Distance />
-            <Cta href='https://github.com/avenga/couper-examples/tree/master/api-proxy'>
+            <Cta href='https://github.com/coupergateway/couper-examples/tree/master/api-proxy'>
               Browse Full Example
             </Cta>
           </Structure.Container>
@@ -315,7 +315,7 @@ const DocsEn = () => {
               </Structure.Container>
             </Breakpoints.OnlyOnMobile>
             <Structure.Distance />
-            <Cta href='https://github.com/avenga/couper-examples/tree/master/jwt-access-control'>
+            <Cta href='https://github.com/coupergateway/couper-examples/tree/master/jwt-access-control'>
               Browse Full Example
             </Cta>
           </Structure.Container>
@@ -401,14 +401,14 @@ const DocsEn = () => {
               <a
                 rel='noopener noreferrer'
                 target='_blank'
-                href='https://github.com/avenga/couper-examples/blob/master/kubernetes-configuration/README.md'
+                href='https://github.com/coupergateway/couper-examples/blob/master/kubernetes-configuration/README.md'
               >
                 Example: Kubernetes configuration
               </a>
             </Typography.Paragraph>
             <Structure.Distance />
             <Typography.Paragraph>
-              <Cta href='https://hub.docker.com/r/avenga/couper'>
+              <Cta href='https://hub.docker.com/r/coupergateway/couper'>
                 Get Docker Image
               </Cta>
             </Typography.Paragraph>

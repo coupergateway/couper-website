@@ -90,7 +90,7 @@ export default function Header({
                 <Cta
                   e2e='button-github-header'
                   name='button-github-header'
-                  href='https://github.com/avenga/couper/'
+                  href='https://github.com/coupergateway/couper/'
                 >
                   <Breakpoints.OnlyOnMobileMenu>
                     <div className='icon'>

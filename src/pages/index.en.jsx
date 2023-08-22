@@ -48,7 +48,7 @@ const IndexEn = () => {
             </Typography.H1>
             <Structure.Distance />
             <Typography.Paragraph>
-              Avenga&apos;s lightweight open source API gateway designed to support developers in
+              Couper&apos;s lightweight open source API gateway designed to support developers in
               building and running API-driven Web projects.
             </Typography.Paragraph>
             <Structure.Distance />
@@ -175,7 +175,7 @@ const IndexEn = () => {
           </Typography.H2>
           <Structure.Distance />
           <Typography.Paragraph>
-            With 20 years of experience, Avenga has developed Couper to support your tactical customer interface
+            With 20 years of experience, Couper was developed to support your tactical customer interface
             development and at the same time enable your strategic system modernization.
           </Typography.Paragraph>
           <Typography.Paragraph>
@@ -212,15 +212,6 @@ const IndexEn = () => {
             <Structure.Distance />
             <Typography.Paragraph>
               <strong>Professional Support</strong>
-            </Typography.Paragraph>
-          </Structure.ContainerCenter>
-          <Structure.ContainerCenter>
-            <Structure.IconLarge color='red'>
-              <Trusted />
-            </Structure.IconLarge>
-            <Structure.Distance />
-            <Typography.Paragraph>
-              <strong>Trusted by Customers</strong>
             </Typography.Paragraph>
           </Structure.ContainerCenter>
         </Structure.FourColumnsCenter>
@@ -273,7 +264,7 @@ const IndexEn = () => {
             Do You Have Questions?
           </Typography.H2line>
           <Typography.Paragraph>
-            With 20+ years of experience, Avenga solves your digital transformation challenges. We understand
+            With 20+ years of experience, Couper solves your digital transformation challenges. We understand
             the complexity of modern markets and develop customized solutions. With Couper, we have already
             successfully implemented over a dozen projects for our clients.
           </Typography.Paragraph>
@@ -290,7 +281,7 @@ const IndexEn = () => {
         <Structure.Container>
           <Typography.H2line color='green'>
             Bronze Stevie® Award Winner
-          </Typography.H2line>  
+          </Typography.H2line>
           <a
               rel='noopener noreferrer'
               target='_blank'

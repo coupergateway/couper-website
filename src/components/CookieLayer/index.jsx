@@ -25,7 +25,7 @@ export default function CookieLayer() {
             Learn more in our
             {' '}
             <a
-              href='https://www.avenga.com/privacy-policy/'
+              href='https://www.couper.io/privacy-policy/'
               target='_blank'
               rel='noopener noreferrer'
               alt='Privacy policy'

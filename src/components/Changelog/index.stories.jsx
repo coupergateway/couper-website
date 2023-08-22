@@ -3,10 +3,10 @@ import React from 'react'
 import Changelog from './Component'
 
 const changelogData = {
-  body: `## [1.1.1](https://github.com/avenga/couper/compare/1.1...1.1.1)
-  
+  body: `## [1.1.1](https://github.com/coupergateway/couper/compare/1.1...1.1.1)
+
   2021-04-21
-  
+
   ### Bug Fixes
 
   * Endpoint responses are written and logged with correct status-code

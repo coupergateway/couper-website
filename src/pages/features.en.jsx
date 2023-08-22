@@ -42,7 +42,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/api-proxy/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/api-proxy/README.md'
                 >
                   Example: Proxy API Requests
                 </a>
@@ -50,7 +50,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/tree/master/sequences/README.md'
+                  href='https://github.com/coupergateway/couper-examples/tree/master/sequences/README.md'
                 >
                   Example: Request Sequences
                 </a>
@@ -71,7 +71,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/custom-requests/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/custom-requests/README.md'
                 >
                   Example: Custom Requests
                 </a>
@@ -79,7 +79,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/tree/master/multiple-requests'
+                  href='https://github.com/coupergateway/couper-examples/tree/master/multiple-requests'
                 >
                   Example: Multiple Requests
                 </a>
@@ -87,7 +87,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/tree/master/static-responses'
+                  href='https://github.com/coupergateway/couper-examples/tree/master/static-responses'
                 >
                   Example: Static Responses
                 </a>
@@ -108,7 +108,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/path-params/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/path-params/README.md'
                 >
                   Example: Path Parameters
                 </a>
@@ -116,7 +116,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/query/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/query/README.md'
                 >
                   Example: Query Parameters
                 </a>
@@ -124,7 +124,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/tree/master/sending-json'
+                  href='https://github.com/coupergateway/couper-examples/tree/master/sending-json'
                 >
                   Example: Sending JSON Content
                 </a>
@@ -132,7 +132,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/tree/master/sending-form'
+                  href='https://github.com/coupergateway/couper-examples/tree/master/sending-form'
                 >
                   Example: Sending Form Content
                 </a>
@@ -155,7 +155,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/jwt-access-control/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/jwt-access-control/README.md'
                 >
                   Example: JWT Access Control
                 </a>
@@ -163,7 +163,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/sending-jwt-upstream/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/sending-jwt-upstream/README.md'
                 >
                   Example: Sending JWT Claims Upstream
                 </a>
@@ -171,7 +171,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/creating-jwt/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/creating-jwt/README.md'
                 >
                   Example: Creating JWT
                 </a>
@@ -179,7 +179,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/saml/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/saml/README.md'
                 >
                   Example: Single-Sign-On with SAML
                 </a>
@@ -187,7 +187,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/oauth2-client-credentials/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/oauth2-client-credentials/README.md'
                 >
                   Example: OAuth2 Client Credentials
                 </a>
@@ -195,7 +195,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/oidc/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/oidc/README.md'
                 >
                   Example: OIDC
                 </a>
@@ -216,7 +216,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/backend-configuration/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/backend-configuration/README.md'
                 >
                   Example: Backend Configuration
                 </a>
@@ -236,7 +236,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/backend-validation/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/backend-validation/README.md'
                 >
                   Example: Backend Validation
                 </a>
@@ -257,7 +257,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/simple-fileserving/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/simple-fileserving/README.md'
                 >
                   Example: Simple File Serving
                 </a>
@@ -265,7 +265,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/spa-serving/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/spa-serving/README.md'
                 >
                   Example: SPA Serving
                 </a>
@@ -286,7 +286,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/error-handling-ba/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/error-handling-ba/README.md'
                 >
                   Example: Error Handling for Access Controls
                 </a>
@@ -294,7 +294,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper/blob/master/docs/ERRORS.md'
+                  href='https://github.com/coupergateway/couper/blob/master/docs/ERRORS.md'
                 >
                   Documentation: Errors
                 </a>
@@ -316,7 +316,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/kubernetes-configuration/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/kubernetes-configuration/README.md'
                 >
                   Example: Kubernetes configuration
                 </a>
@@ -324,7 +324,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/docker-compose/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/docker-compose/README.md'
                 >
                   Example: Using docker-compose
                 </a>
@@ -332,7 +332,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/linking-docker-containers/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/linking-docker-containers/README.md'
                 >
                   Example: Linking Docker Containers
                 </a>
@@ -340,7 +340,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/env-var/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/env-var/README.md'
                 >
                   Example: Environment Variables
                 </a>
@@ -370,7 +370,7 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper-examples/blob/master/custom-logging/README.md'
+                  href='https://github.com/coupergateway/couper-examples/blob/master/custom-logging/README.md'
                 >
                   Example: Custom Logging
                 </a>
@@ -378,14 +378,14 @@ const FeaturesEn = () => {
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper/blob/master/docs/LOGS.md'
+                  href='https://github.com/coupergateway/couper/blob/master/docs/LOGS.md'
                 >
                   Documentation: Logging
                 </a>
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
-                  href='https://github.com/avenga/couper/blob/master/docs/METRICS.md'
+                  href='https://github.com/coupergateway/couper/blob/master/docs/METRICS.md'
                 >
                   Documentation: Metrics
                 </a>
@@ -405,7 +405,7 @@ const FeaturesEn = () => {
               <a
                 rel='noopener noreferrer'
                 target='_blank'
-                href='https://github.com/avenga/couper-examples'
+                href='https://github.com/coupergateway/couper-examples'
               >
                 example repository
               </a>

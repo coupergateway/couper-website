@@ -25,7 +25,7 @@ export default () => (
         <Typography.Paragraph>
           Vice President Account Management
           <br />
-          Avenga Germany GmbH
+          Couper
         </Typography.Paragraph>
         <Typography.Paragraph>
           <a
