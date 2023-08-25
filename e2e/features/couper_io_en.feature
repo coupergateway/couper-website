@@ -19,7 +19,3 @@ Feature: couper.io
     When "docs" is chosen in the top menu in "en"
       Then the URL contains "/en/docs"
         And "h1" is present 1 time
-
-    When "subscriptions" is chosen in the top menu in "en"
-      Then the URL contains "/en/subscriptions"
-        And "h1" is present 1 time

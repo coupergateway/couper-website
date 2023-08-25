@@ -101,14 +101,6 @@ export default function Footer() {
             </div>
             <div>
               <Link
-                to='/en/subscriptions/'
-                data-e2e='footer-subscriptions'
-              >
-                Subscriptions
-              </Link>
-            </div>
-            <div>
-              <Link
                 to='/en/open-id-connect-gateway/'
                 data-e2e='footer-oidc-gateway'
               >
@@ -182,16 +174,6 @@ export default function Footer() {
               >
                 Legal Notice
               </Link>
-            </div>
-            <div>
-              <a
-                data-e2e='privacy-policy'
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://www.couper.io/privacy-policy/'
-              >
-                Privacy Policy
-              </a>
             </div>
           </BottomRight>
           <Copyright data-e2e='copyright'>

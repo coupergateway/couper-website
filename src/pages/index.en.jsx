@@ -17,9 +17,6 @@ import HomeMobileTablet from '../assets/images/en/HomeMobileTablet'
 import Award from '../assets/images/IBA21_Bronze_Winner.png'
 
 import Couper from '../assets/images/Couper'
-import Experience from '../assets/icons/Experience'
-import OpenSource from '../assets/icons/OpenSource'
-import Support from '../assets/icons/Support'
 
 const IndexEn = () => {
   const { setTitle } = useContext(mainContext)
@@ -186,38 +183,6 @@ const IndexEn = () => {
       </Structure.Wrapper>
 
       <Structure.Wrapper>
-        <Structure.FourColumnsCenter>
-          <Structure.ContainerCenter>
-            <Structure.IconLarge color='purple'>
-              <Experience />
-            </Structure.IconLarge>
-            <Structure.Distance />
-            <Typography.Paragraph>
-              <strong>20+ Years of Experience</strong>
-            </Typography.Paragraph>
-          </Structure.ContainerCenter>
-          <Structure.ContainerCenter>
-            <Structure.IconLarge color='orange'>
-              <OpenSource />
-            </Structure.IconLarge>
-            <Structure.Distance />
-            <Typography.Paragraph>
-              <strong>Open Source</strong>
-            </Typography.Paragraph>
-          </Structure.ContainerCenter>
-          <Structure.ContainerCenter>
-            <Structure.IconLarge color='blue'>
-              <Support />
-            </Structure.IconLarge>
-            <Structure.Distance />
-            <Typography.Paragraph>
-              <strong>Professional Support</strong>
-            </Typography.Paragraph>
-          </Structure.ContainerCenter>
-        </Structure.FourColumnsCenter>
-      </Structure.Wrapper>
-
-      <Structure.Wrapper>
         <Structure.Container>
           <Structure.Distance />
           <Typography.H2line color='blue'>
@@ -265,8 +230,7 @@ const IndexEn = () => {
           </Typography.H2line>
           <Typography.Paragraph>
             With 20+ years of experience, Couper solves your digital transformation challenges. We understand
-            the complexity of modern markets and develop customized solutions. With Couper, we have already
-            successfully implemented over a dozen projects for our clients.
+            the complexity of modern markets and develop customized solutions.
           </Typography.Paragraph>
           <Typography.Paragraph>
             <Cta

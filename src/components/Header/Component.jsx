@@ -68,15 +68,6 @@ export default function Header({
                   Docs
                 </Link>
               </MenuItem>
-              <MenuItem active={path === '/en/subscriptions/'}>
-                <Link
-                  className='text'
-                  data-e2e='subscriptions'
-                  to='/en/subscriptions/'
-                >
-                  Subscriptions
-                </Link>
-              </MenuItem>
               <MenuItem active={path === '/en/open-id-connect-gateway/'}>
               <Link
                   className='text'

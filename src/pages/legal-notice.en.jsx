@@ -23,9 +23,9 @@ const LegalNoticeEn = () => {
         <br />
         <br />
         <Typography.H3line>
-        ---
+        Marcel Ludwig
         </Typography.H3line>
-        ---
+        <a href='https://github.com/malud'>https://github.com/malud</a>
         <br />
         ---
         <br />
@@ -55,40 +55,6 @@ const LegalNoticeEn = () => {
         >
           www.couper.io
         </a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="purple">
-          Legal form
-        </Typography.H3line>
-        ---
-        <br />
-        ---
-        <br />
-        ---
-        <br />
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="blue">
-          Management
-        </Typography.H3line>
-        ---
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="orange">
-          ---
-        </Typography.H3line>
-        ---
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="red">
-          Data Protection Officer (DPO)
-        </Typography.H3line>
-        ---
       </Structure.Wrapper>
     </>
   )
