@@ -16,7 +16,7 @@ import OpenGraph from '../../assets/images/opengraph.png'
 
 const txt = {
   title: {
-    en: 'Couper - Avenga\'s lightweight API Gateway for Developers',
+    en: 'Couper - a lightweight API Gateway for Developers',
   },
   description: {
     // eslint-disable-next-line max-len
@@ -86,7 +86,7 @@ function Frame({ children, pageContext }) {
           "name": "${name}",
           "contactPoint": {
             "@type": "ContactPoint",
-            "url": "https://github.com/avenga/couper/discussions",
+            "url": "https://github.com/coupergateway/couper/discussions",
             "contactType": "Technical Support"
           },
           "address": {
@@ -99,7 +99,7 @@ function Frame({ children, pageContext }) {
           "email": "contact@couper.io",
           "description": "${siteDesc}",
           "sameAs": [
-            "https://github.com/avenga/couper"
+            "https://github.com/coupergateway/couper"
           ]
         }`}
         </script>

@@ -36,7 +36,7 @@ export default function Footer() {
             Couper
           </HeadDescription>
           <Description data-e2e='description'>
-            Avenga&apos;s lightweight open source API gateway designed to support
+            Couper&apos;s lightweight open source API gateway designed to support
             developers in building and running API-driven Web projects.
           </Description>
           <Icons>
@@ -54,7 +54,7 @@ export default function Footer() {
               data-e2e='social-github'
               target='_blank'
               rel='noopener noreferrer'
-              href='https://github.com/avenga/couper'
+              href='https://github.com/coupergateway/couper'
               alt='Find couper on GitHub'
               title='Find couper on GitHub'
             >
@@ -101,14 +101,6 @@ export default function Footer() {
             </div>
             <div>
               <Link
-                to='/en/subscriptions/'
-                data-e2e='footer-subscriptions'
-              >
-                Subscriptions
-              </Link>
-            </div>
-            <div>
-              <Link
                 to='/en/open-id-connect-gateway/'
                 data-e2e='footer-oidc-gateway'
               >
@@ -125,7 +117,7 @@ export default function Footer() {
                 data-e2e='github-couper'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/avenga/couper/'
+                href='https://github.com/coupergateway/couper/'
               >
                 Open Source
               </a>
@@ -135,7 +127,7 @@ export default function Footer() {
                 data-e2e='github-issues'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/avenga/couper/issues/'
+                href='https://github.com/coupergateway/couper/issues/'
               >
                 Report a Problem
               </a>
@@ -145,7 +137,7 @@ export default function Footer() {
                 data-e2e='github-discussions'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/avenga/couper/discussions'
+                href='https://github.com/coupergateway/couper/discussions'
               >
                 Ask a Question
               </a>
@@ -183,21 +175,11 @@ export default function Footer() {
                 Legal Notice
               </Link>
             </div>
-            <div>
-              <a
-                data-e2e='privacy-policy'
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://www.avenga.com/privacy-policy/'
-              >
-                Privacy Policy
-              </a>
-            </div>
           </BottomRight>
           <Copyright data-e2e='copyright'>
             &copy;&nbsp;
             {year}
-            &nbsp;Avenga. All&nbsp;rights&nbsp;reserved
+            &nbsp;Couper. All&nbsp;rights&nbsp;reserved
           </Copyright>
         </Columns>
       </NotchPadding>

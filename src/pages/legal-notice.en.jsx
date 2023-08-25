@@ -17,22 +17,22 @@ const LegalNoticeEn = () => {
           Legal Notice
         </Typography.H1>
         <br />
-        couper.io - developed and operated by Avenga Germany GmbH
+        couper.io
         <br />
         <br />
         <br />
         <br />
         <Typography.H3line>
-        Avenga Germany GmbH
+        Marcel Ludwig
         </Typography.H3line>
-        Bahnhofsvorplatz 1
+        <a href='https://github.com/malud'>https://github.com/malud</a>
         <br />
-        50667 Cologne, Germany
+        ---
         <br />
         <br />
-        Phone: +49 (0) 221 84 630 0
+        ---
         <br />
-        Fax: +49 (0) 221 84 630 165
+        ---
         <br />
         E-Mail:
         {' '}
@@ -51,44 +51,10 @@ const LegalNoticeEn = () => {
         <a
           target='_blank'
           rel='noopener noreferrer'
-          href='https://www.avenga.com/'
+          href='https://www.couper.io/'
         >
-          www.avenga.com
+          www.couper.io
         </a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="purple">
-          Legal form
-        </Typography.H3line>
-        GmbH – limited liability company
-        <br />
-        Company registry: Cologne County Court HRB 79823
-        <br />
-        VAT ID.: DE815448435
-        <br />
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="blue">
-          Management
-        </Typography.H3line>
-        Thorsten May (CEO)
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="orange">
-          DUNS / UPIK
-        </Typography.H3line>
-        342766551
-        <br />
-        <br />
-        <br />
-        <Typography.H3line color="red">
-          Data Protection Officer (DPO)
-        </Typography.H3line>
-        Dirk Marwinski
       </Structure.Wrapper>
     </>
   )

@@ -50,14 +50,14 @@ export default function Changelog({ changelogData, changelogLoading, changelogEr
               <ReactMarkdown>
                 {changelogData.body
                   .replace(/(<([^>]+)>)/ig, '')
-                  .replace(/\]\((?!https?:\/\/)([^\/]*)/gi, '](https://github.com/avenga/couper/tree/master/$1')
+                  .replace(/\]\((?!https?:\/\/)([^\/]*)/gi, '](https://github.com/coupergateway/couper/tree/master/$1')
                 }
               </ReactMarkdown>
               <br />
               <Cta
                 e2e='button-github-header'
                 name='button-github-header'
-                href='https://github.com/avenga/couper/'
+                href='https://github.com/coupergateway/couper/'
               >
                 <div>
                   <div className='icon'>

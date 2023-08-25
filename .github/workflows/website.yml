@@ -30,7 +30,7 @@ jobs:
 #        working-directory: e2e
 #        run: |
 #          npm ci
-#          docker run -d --name ${GITHUB_SHA::6} -h couper -v ${{ github.workspace }}/public:/public -e COUPER_LOG_LEVEL=debug -p 8080:8080 avenga/couper
+#          docker run -d --name ${GITHUB_SHA::6} -h couper -v ${{ github.workspace }}/public:/public -e COUPER_LOG_LEVEL=debug -p 8080:8080 coupergateway/couper
 #          curl -v --head http://localhost:8080/
 #          docker logs ${GITHUB_SHA::6} |head
 #          docker run -d --name ${GITHUB_SHA::6}-chrome -h chrome --link ${GITHUB_SHA::6} -p 4444:4444 selenium/standalone-chrome@sha256:ae0f7437eabb0ae02d0c223a338da67c4cb6ab1be838b2ff6e0bdba752d03e6a

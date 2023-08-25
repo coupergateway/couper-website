@@ -137,33 +137,30 @@ const elementSelectors = {
     ['//*[@data-e2e="use-cases"]', 'Use Cases', '/en/use-cases/'],
     ['//*[@data-e2e="docs"]', 'Docs', '/en/docs/'],
     ['//*[@data-e2e="features"]', 'Features', '/en/features/'],
-    ['//*[@data-e2e="subscriptions"]', 'Subscriptions', '/en/subscriptions/'],
     ['//*[@data-e2e="button-github-header"]'],
   ],
   footer: [
     ['//*[@data-e2e="head-description"]', 'Couper'],
     ['//*[@data-e2e="description"]'],
     ['//*[@data-e2e="social-twitter"]', '', 'https://twitter.com/couper_io'],
-    ['//*[@data-e2e="social-github"]', '', 'https://github.com/avenga/couper'],
+    ['//*[@data-e2e="social-github"]', '', 'https://github.com/coupergateway/couper'],
     ['//*[@data-e2e="social-mail"]', '', 'mailto:contact@couper.io'],
 
     ['//*[@data-e2e="headerLeft"]', 'Content'],
     ['//*[@data-e2e="footer-use-cases"]', 'Use Cases', '/en/use-cases/'],
     ['//*[@data-e2e="footer-docs"]', 'Docs', '/en/docs/'],
     ['//*[@data-e2e="footer-features"]', 'Features', '/en/features/'],
-    ['//*[@data-e2e="footer-subscriptions"]', 'Subscriptions', '/en/subscriptions/'],
 
     ['//*[@data-e2e="headerRight"]', 'Support'],
-    ['//*[@data-e2e="github-couper"]', 'Open Source', 'https://github.com/avenga/couper/'],
-    ['//*[@data-e2e="github-issues"]', 'Report a Problem', 'https://github.com/avenga/couper/issues/'],
-    ['//*[@data-e2e="github-discussions"]', 'Ask a Question', 'https://github.com/avenga/couper/discussions'],
+    ['//*[@data-e2e="github-couper"]', 'Open Source', 'https://github.com/coupergateway/couper/'],
+    ['//*[@data-e2e="github-issues"]', 'Report a Problem', 'https://github.com/coupergateway/couper/issues/'],
+    ['//*[@data-e2e="github-discussions"]', 'Ask a Question', 'https://github.com/coupergateway/couper/discussions'],
 
     ['//*[@data-e2e="mobile-contact"]', 'Contact', 'mailto:contact@couper.io'],
     ['//*[@data-e2e="desktop-contact"]', 'Contact', 'mailto:contact@couper.io'],
     ['//*[@data-e2e="legal-notice"]', 'Legal Notice', '/en/legal-notice/'],
-    ['//*[@data-e2e="privacy-policy"]', 'Privacy Policy', 'https://www.avenga.com/privacy-policy/'],
 
-    ['//*[@data-e2e="copyright"]', `© ${year} Avenga. All rights reserved`],
+    ['//*[@data-e2e="copyright"]', `© ${year} Couper. All rights reserved`],
   ],
 }
 
@@ -181,20 +178,14 @@ Given('couper.io is opened in {string} with complete metadata', async (lang: str
           "name": "couper.io",
           "contactPoint": {
             "@type": "ContactPoint",
-            "url": "https://github.com/avenga/couper/discussions",
+            "url": "https://github.com/coupergateway/couper/discussions",
             "contactType": "Technical Support"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Cologne, GER",
-            "postalCode": "50667",
-            "streetAddress": "Bahnhofsvorplatz 1"
           },
           "logo": "https://couper.io/icons/icon-512x512.png",
           "email": "contact@couper.io",
           "description": "Build digital products faster and deliver immediate value to your customers. Couper supports developers in building and running API-driven Web projects.",
           "sameAs": [
-            "https://github.com/avenga/couper"
+            "https://github.com/coupergateway/couper"
           ]
         }`
   )

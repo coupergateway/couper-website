@@ -31,7 +31,7 @@ const OpenIdConnectGatewayEn = () => {
             It verifies the identity of an end-user based on the (two-factor) authentication performed by your OpenID Provider.
             </Typography.Paragraph>
             <Typography.Paragraph>
-              <Cta href='https://github.com/avenga/couper-oidc-gateway'>
+              <Cta href='https://github.com/coupergateway/couper-oidc-gateway'>
                 Gateway Repository
               </Cta>
             </Typography.Paragraph>
@@ -110,7 +110,7 @@ const OpenIdConnectGatewayEn = () => {
         <Structure.Distance/>
         <Structure.ContainerCenter>
           <Typography.Paragraph>
-            <Cta href='https://github.com/avenga/couper-oidc-gateway'>
+            <Cta href='https://github.com/coupergateway/couper-oidc-gateway'>
               Get Started
             </Cta>
           </Typography.Paragraph>

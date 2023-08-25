@@ -233,7 +233,7 @@ const UseCasesEn = () => {
             What Can We Do For You?
           </Typography.H2>
           <Typography.Paragraph>
-            With 20+ years of experience, Avenga solves your digital transformation challenges. We understand
+            With 20+ years of experience, Couper solves your digital transformation challenges. We understand
             the complexity of modern markets and develop customized solutions. With Couper, we have already
             successfully implemented over a dozen projects for our clients.
           </Typography.Paragraph>
