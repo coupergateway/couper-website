@@ -382,6 +382,7 @@ const FeaturesEn = () => {
                 >
                   Documentation: Logging
                 </a>
+                <br />
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
