@@ -12,12 +12,12 @@ import Modernize from '../assets/icons/Modernize'
 import Security from '../assets/icons/Security'
 import Customer from '../assets/icons/Customer'
 
-import ModernizeDesktop from '../assets/images/en/ModernizeDesktop'
-import ModernizeMobileTablet from '../assets/images/en/ModernizeMobileTablet'
-import SecureYourApiDesktop from '../assets/images/en/SecureYourApiDesktop'
-import SecureYourApiMobileTablet from '../assets/images/en/SecureYourApiMobileTablet'
-import MoreThanOneDesktop from '../assets/images/en/MoreThanOneDesktop'
-import MoreThanOneMobileTablet from '../assets/images/en/MoreThanOneMobileTablet'
+import ModernizeDesktop from '../assets/images/ModernizeDesktop'
+import ModernizeMobileTablet from '../assets/images/ModernizeMobileTablet'
+import SecureYourApiDesktop from '../assets/images/SecureYourApiDesktop'
+import SecureYourApiMobileTablet from '../assets/images/SecureYourApiMobileTablet'
+import MoreThanOneDesktop from '../assets/images/MoreThanOneDesktop'
+import MoreThanOneMobileTablet from '../assets/images/MoreThanOneMobileTablet'
 
 const UseCasesEn = () => {
   const { setTitle } = useContext(mainContext)

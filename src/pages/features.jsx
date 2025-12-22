@@ -416,7 +416,7 @@ const FeaturesEn = () => {
               If you prefer a quick dive in, have a look at our getting started tutorial.
             </Typography.Paragraph>
             <Distance />
-            <Cta to='/en/docs#getting-started'>
+            <Cta to='/docs#getting-started'>
               Get Started
             </Cta>
           </Structure.ContainerCenter>

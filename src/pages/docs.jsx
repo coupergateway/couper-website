@@ -19,8 +19,8 @@ import HelloWorld from '../components/CodeBlock/hello_world.hcl'
 import RunCouperNative from '../components/CodeBlock/run_couper_native.sh'
 import RunCouperOutput from '../components/CodeBlock/run_couper_output.sh'
 
-import OverviewTabletDesktop from '../assets/images/en/OverviewTabletDesktop'
-import OverviewMobile from '../assets/images/en/OverviewMobile'
+import OverviewTabletDesktop from '../assets/images/OverviewTabletDesktop'
+import OverviewMobile from '../assets/images/OverviewMobile'
 
 const DocsEn = () => {
   const { setTitle } = useContext(mainContext)

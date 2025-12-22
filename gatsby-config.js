@@ -52,15 +52,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        langKeyForNull: 'en',
-        prefixDefault: true,
-        useLangKeyLayout: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://couper.io',

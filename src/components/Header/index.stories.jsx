@@ -12,7 +12,7 @@ const Template = (args) => (
     menuOpen={false}
     setMenuOpen={() => {}}
     lang='en'
-    path='/en/'
+    path='/'
     {...args}
   />
 )
@@ -22,5 +22,5 @@ Full.args = {
   menuOpen: false,
   setMenuOpen: () => {},
   lang: 'en',
-  path: '/en/',
+  path: '/',
 }

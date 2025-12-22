@@ -9,7 +9,7 @@ export default function MainProvider({ children }) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [lang, setLang] = useState('en')
-  const [path, setPath] = useState('/en/')
+  const [path, setPath] = useState('/')
   const [init, setInit] = useState(true)
 
   const [changelogLoading, setChangelogLoading] = useState(true)

@@ -11,7 +11,7 @@ export default () => {
   }
 
   return (
-    <Link to='/en/docs/#changelog'>
+    <Link to='/docs/#changelog'>
       {`Version ${changelogData.name} last updated: ${changelogData.published_at.split('T')[0]}`}
     </Link>
   )

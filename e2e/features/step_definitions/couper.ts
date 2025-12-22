@@ -131,12 +131,12 @@ const elementSelectors = {
     '//head/meta[@property="og:image:type"]',
   ],
   header: [
-    ['//*[@data-e2e="header-logo"]', '', '/en/'],
+    ['//*[@data-e2e="header-logo"]', '', '/'],
     ['//*[@data-e2e="burger-menu-button"]'],
 
-    ['//*[@data-e2e="use-cases"]', 'Use Cases', '/en/use-cases/'],
-    ['//*[@data-e2e="docs"]', 'Docs', '/en/docs/'],
-    ['//*[@data-e2e="features"]', 'Features', '/en/features/'],
+    ['//*[@data-e2e="use-cases"]', 'Use Cases', '/use-cases/'],
+    ['//*[@data-e2e="docs"]', 'Docs', '/docs/'],
+    ['//*[@data-e2e="features"]', 'Features', '/features/'],
     ['//*[@data-e2e="button-github-header"]'],
   ],
   footer: [
@@ -147,9 +147,9 @@ const elementSelectors = {
     ['//*[@data-e2e="social-mail"]', '', 'mailto:contact@couper.io'],
 
     ['//*[@data-e2e="headerLeft"]', 'Content'],
-    ['//*[@data-e2e="footer-use-cases"]', 'Use Cases', '/en/use-cases/'],
-    ['//*[@data-e2e="footer-docs"]', 'Docs', '/en/docs/'],
-    ['//*[@data-e2e="footer-features"]', 'Features', '/en/features/'],
+    ['//*[@data-e2e="footer-use-cases"]', 'Use Cases', '/use-cases/'],
+    ['//*[@data-e2e="footer-docs"]', 'Docs', '/docs/'],
+    ['//*[@data-e2e="footer-features"]', 'Features', '/features/'],
 
     ['//*[@data-e2e="headerRight"]', 'Support'],
     ['//*[@data-e2e="github-couper"]', 'Open Source', 'https://github.com/coupergateway/couper/'],
@@ -158,7 +158,7 @@ const elementSelectors = {
 
     ['//*[@data-e2e="mobile-contact"]', 'Contact', 'mailto:contact@couper.io'],
     ['//*[@data-e2e="desktop-contact"]', 'Contact', 'mailto:contact@couper.io'],
-    ['//*[@data-e2e="legal-notice"]', 'Legal Notice', '/en/legal-notice/'],
+    ['//*[@data-e2e="legal-notice"]', 'Legal Notice', '/legal-notice/'],
 
     ['//*[@data-e2e="copyright"]', `© ${year} Couper. All rights reserved`],
   ],

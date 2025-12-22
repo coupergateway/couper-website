@@ -30,11 +30,11 @@ function Frame({ children, pageContext }) {
   } = useContext(mainContext)
 
   useEffect(() => {
-    if (lang !== pageContext?.langKey) {
-      setLang(pageContext?.langKey || 'en')
+    if (lang !== 'en') {
+      setLang('en')
     }
     if (path !== pageContext?.slug) {
-      setPath(pageContext?.slug || '/en/')
+      setPath(pageContext?.slug || '/')
     }
   }, [lang, pageContext, path, setLang, setPath])
 
@@ -52,7 +52,7 @@ function Frame({ children, pageContext }) {
         <link hrefLang={lang} />
         {/*
           <link rel='alternate' href='/de/' hreflang='de' />
-          <link rel='alternate' href='/en/' hreflang='en' />
+          <link rel='alternate' href='/' hreflang='en' />
         */}
         <link rel='canonical' href={`${url}${path}`} />
         <link rel='icon' href='/couper-logo-circle.svg' />
@@ -118,8 +118,7 @@ function Frame({ children, pageContext }) {
 Frame.propTypes = {
   children: PropTypes.any.isRequired,
   pageContext: PropTypes.shape({
-    langKey: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
+    slug: PropTypes.string,
   }),
 }
 

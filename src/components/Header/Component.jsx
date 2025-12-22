@@ -41,38 +41,38 @@ export default function Header({
           </Logo>
           <Navigation menuOpen={menuOpen}>
             <Menu>
-              <MenuItem active={path === '/en/use-cases/'}>
+              <MenuItem active={path === '/use-cases/'}>
                 <Link
                   className='text'
                   data-e2e='use-cases'
-                  to='/en/use-cases/'
+                  to='/use-cases/'
                 >
                   Use Cases
                 </Link>
               </MenuItem>
-              <MenuItem active={path === '/en/features/'}>
+              <MenuItem active={path === '/features/'}>
                 <Link
                   className='text'
                   data-e2e='features'
-                  to='/en/features/'
+                  to='/features/'
                 >
                   Features
                 </Link>
               </MenuItem>
-              <MenuItem active={path === '/en/docs/'}>
+              <MenuItem active={path === '/docs/'}>
                 <Link
                   className='text'
                   data-e2e='docs'
-                  to='/en/docs/'
+                  to='/docs/'
                 >
                   Docs
                 </Link>
               </MenuItem>
-              <MenuItem active={path === '/en/open-id-connect-gateway/'}>
+              <MenuItem active={path === '/open-id-connect-gateway/'}>
               <Link
                   className='text'
                   data-e2e='open-id-connect-gateway'
-                  to='/en/open-id-connect-gateway/'
+                  to='/open-id-connect-gateway/'
                 >
                   OIDC Gateway
                 </Link>

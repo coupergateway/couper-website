@@ -77,7 +77,7 @@ export default function Footer() {
           <MenuLeft>
             <div>
               <Link
-                to='/en/use-cases/'
+                to='/use-cases/'
                 data-e2e='footer-use-cases'
               >
                 Use Cases
@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
             <div>
               <Link
-                to='/en/features/'
+                to='/features/'
                 data-e2e='footer-features'
               >
                 Features
@@ -93,7 +93,7 @@ export default function Footer() {
             </div>
             <div>
               <Link
-                to='/en/docs/'
+                to='/docs/'
                 data-e2e='footer-docs'
               >
                 Docs
@@ -101,7 +101,7 @@ export default function Footer() {
             </div>
             <div>
               <Link
-                to='/en/open-id-connect-gateway/'
+                to='/open-id-connect-gateway/'
                 data-e2e='footer-oidc-gateway'
               >
                 OIDC Gateway
@@ -169,7 +169,7 @@ export default function Footer() {
           <BottomRight>
             <div>
               <Link
-                to='/en/legal-notice/'
+                to='/legal-notice/'
                 data-e2e='legal-notice'
               >
                 Legal Notice
