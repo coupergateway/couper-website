@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: install dependencies
         run: npm ci
@@ -24,7 +24,7 @@ jobs:
       - name: build website
         run: npm run build
 
-      - run: cp {robots.txt,CNAME} public/
+      - run: cp {robots.txt,CNAME,llms.txt} public/
 
 #      - name: integration tests
 #        working-directory: e2e
@@ -37,7 +37,7 @@ jobs:
 #          npm run ci-e2e
 
       - name: create artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: public
           if-no-files-found: warn
@@ -57,4 +57,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

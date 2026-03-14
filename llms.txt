@@ -1,0 +1,44 @@
+# Couper
+
+> Couper is a lightweight open-source API gateway designed to support developers in building and running API-driven web projects.
+
+Couper acts as an entry point for clients to your application (frontend API gateway) and an exit point to upstream services. It adds access control, observability, and backend connectivity on a separate architectural layer, keeping your core application code simple.
+
+## Key Features
+
+- **HTTP Request Routing / Forwarding**: Proxy component forwarding requests and responses between clients and upstream services. Create virtual endpoints and configure upstream URLs.
+- **Web Serving**: Built-in file server and SPA (Single Page Application) asset serving.
+- **Access Control**: JWT validation, OAuth2, OpenID Connect (OIDC), SAML, Basic Auth, and client/server certificate-based authentication.
+- **API Aggregation**: Combine multiple upstream API calls into a single client-facing endpoint via request sequences.
+- **Observability**: Structured logging, distributed tracing (OpenTelemetry), Prometheus metrics, and health checks.
+- **Rate Limiting**: Configurable rate limiting for API protection.
+- **WebSockets**: WebSocket proxy support.
+- **TLS/mTLS**: Full TLS and mutual TLS support.
+- **CORS**: Built-in Cross-Origin Resource Sharing configuration.
+- **Error Handling**: Hierarchical error type system with configurable error handlers.
+
+## Configuration
+
+Couper uses HCL (HashiCorp Configuration Language) for its configuration files (`couper.hcl`). The syntax is easy to read, yet powerful and expressive. A VS Code extension is available for syntax highlighting and autocompletion.
+
+## Installation
+
+Available as:
+- Container image on DockerHub: `coupergateway/couper`
+- Binary from GitHub releases
+- Homebrew: `brew tap coupergateway/couper && brew install couper`
+
+## Links
+
+- Website: https://couper.io
+- Source code: https://github.com/coupergateway/couper
+- Examples repository: https://github.com/coupergateway/couper-examples
+- VS Code Extension: https://marketplace.visualstudio.com/items?itemName=couper.couperconf
+- Docker Hub: https://hub.docker.com/r/coupergateway/couper
+
+## Documentation
+
+For detailed configuration reference, block definitions, access control setup, expressions, functions, error handling, and all other technical documentation:
+
+- Full documentation: https://docs.couper.io
+- Documentation for LLMs: https://docs.couper.io/llms.txt
