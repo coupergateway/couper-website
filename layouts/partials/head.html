@@ -1,0 +1,87 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+{{- $siteTitle := "Couper" -}}
+{{- $siteDesc := site.Params.description -}}
+{{- $pageTitle := .Title | default "Welcome" -}}
+{{- $fullTitle := printf "%s | Couper - Open Source API Gateway" $pageTitle -}}
+{{- if .IsHome -}}
+  {{- $fullTitle = "Couper - a lightweight API Gateway for Developers" -}}
+{{- end -}}
+{{- $description := .Params.description | default $siteDesc -}}
+{{- $canonicalURL := .Permalink -}}
+{{- $siteURL := site.Params.siteURL | default "https://couper.io" -}}
+
+<title>{{ $fullTitle }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ $canonicalURL }}">
+<link rel="icon" href="/couper-logo-circle.svg">
+
+{{/* Preload primary font weight */}}
+<link rel="preload" href="/fonts/work-sans/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ $fullTitle }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ $canonicalURL }}">
+<meta property="og:site_name" content="{{ $siteTitle }}">
+<meta property="og:image" content="{{ $siteURL }}/images/opengraph.png">
+<meta property="og:image:alt" content="{{ $fullTitle }}">
+<meta property="og:type" content="website">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+
+{{/* Twitter Cards */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@couper_io">
+<meta name="twitter:title" content="{{ $fullTitle }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $siteURL }}/images/opengraph.png">
+
+{{/* Structured Data - Organization (all pages) */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "{{ $siteURL }}",
+  "name": "Couper",
+  "logo": "{{ $siteURL }}/couper-logo-circle.svg",
+  "description": "{{ $siteDesc }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://github.com/coupergateway/couper/discussions",
+    "contactType": "Technical Support"
+  },
+  "sameAs": [
+    "https://github.com/coupergateway/couper",
+    "https://twitter.com/couper_io"
+  ]
+}
+</script>
+
+{{/* Structured Data - SoftwareApplication (home page only) */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Couper",
+  "description": "{{ $siteDesc }}",
+  "url": "{{ $siteURL }}",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Linux, macOS, Windows",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+{{ end }}
+
+{{/* CSS */}}
+{{ with resources.Get "css/main.css" | css.TailwindCSS }}
+  <style>{{ .Content | safeCSS }}</style>
+{{ end }}

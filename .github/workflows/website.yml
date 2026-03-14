@@ -7,36 +7,31 @@ on:
 
 jobs:
   build:
-    name: build-and-test
+    name: build
     runs-on: ubuntu-latest
     steps:
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
       - name: Check out
         uses: actions/checkout@v4
 
-      - name: install dependencies
-        run: npm ci
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
 
-      - name: build website
-        run: npm run build
+      - uses: pnpm/action-setup@v4
 
-      - run: cp {robots.txt,CNAME,llms.txt} public/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
 
-#      - name: integration tests
-#        working-directory: e2e
-#        run: |
-#          npm ci
-#          docker run -d --name ${GITHUB_SHA::6} -h couper -v ${{ github.workspace }}/public:/public -e COUPER_LOG_LEVEL=debug -p 8080:8080 coupergateway/couper
-#          curl -v --head http://localhost:8080/
-#          docker logs ${GITHUB_SHA::6} |head
-#          docker run -d --name ${GITHUB_SHA::6}-chrome -h chrome --link ${GITHUB_SHA::6} -p 4444:4444 selenium/standalone-chrome@sha256:ae0f7437eabb0ae02d0c223a338da67c4cb6ab1be838b2ff6e0bdba752d03e6a
-#          npm run ci-e2e
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: create artifact
+      - name: Build website
+        run: hugo --minify
+
+      - name: Create artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
@@ -44,15 +39,14 @@ jobs:
           retention-days: 2
 
   deploy:
-    name: 'Deploy 🚀'
+    name: Deploy
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write
+      id-token: write
     needs: build
     steps:
       - name: Deploy to GitHub Pages

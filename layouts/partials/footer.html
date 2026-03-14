@@ -1,0 +1,61 @@
+<footer class="bg-black text-white mt-16">
+  <div class="section-wrapper">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {{/* Brand column */}}
+      <div>
+        <h3 class="text-lg font-medium mb-3">Couper</h3>
+        <p class="text-sm text-gray-dark leading-relaxed">
+          Couper's lightweight open source API gateway designed to support
+          developers in building and running API-driven Web projects.
+        </p>
+        <div class="flex gap-4 mt-4">
+          <a href="https://twitter.com/couper_io" target="_blank" rel="noopener noreferrer" title="Find couper on Twitter" class="text-white hover:text-green w-6 h-6">
+            {{ partial "svg/icon-twitter.html" }}
+          </a>
+          <a href="https://github.com/coupergateway/couper" target="_blank" rel="noopener noreferrer" title="Find couper on GitHub" class="text-white hover:text-green w-6 h-6">
+            {{ partial "svg/icon-github.html" }}
+          </a>
+          <a href="mailto:contact@couper.io" title="Send us an Email" class="text-white hover:text-green w-6 h-6">
+            {{ partial "svg/icon-mail.html" }}
+          </a>
+        </div>
+      </div>
+
+      {{/* Content column */}}
+      <div>
+        <h3 class="text-lg font-medium mb-3">Content</h3>
+        <ul class="space-y-2 text-sm list-none p-0">
+          <li><a href="/use-cases/" class="text-gray hover:text-green">Use Cases</a></li>
+          <li><a href="/features/" class="text-gray hover:text-green">Features</a></li>
+          <li><a href="/docs/" class="text-gray hover:text-green">Docs</a></li>
+          <li><a href="/open-id-connect-gateway/" class="text-gray hover:text-green">OIDC Gateway</a></li>
+        </ul>
+      </div>
+
+      {{/* Support column */}}
+      <div>
+        <h3 class="text-lg font-medium mb-3">Support</h3>
+        <ul class="space-y-2 text-sm list-none p-0">
+          <li><a href="https://github.com/coupergateway/couper/" target="_blank" rel="noopener noreferrer" class="text-gray hover:text-green">Open Source</a></li>
+          <li><a href="https://github.com/coupergateway/couper/issues/" target="_blank" rel="noopener noreferrer" class="text-gray hover:text-green">Report a Problem</a></li>
+          <li><a href="https://github.com/coupergateway/couper/discussions" target="_blank" rel="noopener noreferrer" class="text-gray hover:text-green">Ask a Question</a></li>
+        </ul>
+      </div>
+
+      {{/* Contact column */}}
+      <div>
+        <a href="https://github.com/coupergateway/couper" target="_blank" rel="noopener noreferrer" class="cta">
+          Contact us on GitHub
+        </a>
+      </div>
+    </div>
+
+    {{/* Bottom bar */}}
+    <div class="mt-10 pt-6 border-t border-gray-dark/30 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-dark">
+      <div>
+        <a href="/legal-notice/" class="text-gray hover:text-green">Legal Notice</a>
+      </div>
+      <div>&copy; {{ now.Year }} Couper. All rights reserved</div>
+    </div>
+  </div>
+</footer>

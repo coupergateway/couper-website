@@ -1,0 +1,157 @@
+{{ define "main" }}
+{{/* Hero */}}
+<section class="section-wrapper" aria-label="Use Cases overview">
+  <div class="max-w-3xl">
+    <h1 class="text-2xl font-medium mb-4">Use Cases</h1>
+    <p class="leading-relaxed">
+      Couper supports your company's digital journey in various ways. Whether you want to
+      modernize your IT, enhance your customers' digital experience or secure your APIs &ndash; Couper
+      is the perfect fit.
+    </p>
+  </div>
+</section>
+
+{{/* Use Case Cards */}}
+<section class="section-wrapper" aria-label="Use case categories">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <a href="#modernize" class="tile-border text-center no-underline hover:no-underline block">
+      <div class="icon-large bg-blue/10 text-blue mx-auto">
+        {{ partial "svg/icon-modernize.html" }}
+      </div>
+      <h3 class="text-lg font-medium mb-3 text-black">Modernize your IT</h3>
+      <p class="leading-relaxed text-black">
+        Imagine you can build digital products and modernize your IT at the same time. Sounds too
+        good to be true? Find out how Couper helps.
+      </p>
+    </a>
+    <a href="#secure" class="tile-border text-center no-underline hover:no-underline block">
+      <div class="icon-large bg-red/10 text-red mx-auto">
+        {{ partial "svg/icon-security.html" }}
+      </div>
+      <h3 class="text-lg font-medium mb-3 text-black">Secure your APIs</h3>
+      <p class="leading-relaxed text-black">
+        APIs are a critical part of modern applications. Couper simplifies securing them by adding
+        a configurable access control layer that implements JWT, SAML and OAuth.
+      </p>
+    </a>
+    <a href="#prepare" class="tile-border text-center no-underline hover:no-underline block">
+      <div class="icon-large bg-orange/10 text-orange mx-auto">
+        {{ partial "svg/icon-customer.html" }}
+      </div>
+      <h3 class="text-lg font-medium mb-3 text-black">Target your audience</h3>
+      <p class="leading-relaxed text-black">
+        Most companies have more than one target audience. With Couper you can perfectly meet their
+        different needs by speeding up the time to market of new user interfaces for all your systems
+        and services.
+      </p>
+    </a>
+  </div>
+</section>
+
+{{/* Modernize Your IT */}}
+<section class="section-wrapper" aria-label="Modernize Your IT" id="modernize">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="h2-line h2-line-blue text-xl font-medium mb-4">Modernize Your IT</h2>
+      <p class="leading-relaxed">
+        The development of digital products is often delayed by outdated systems and structures in the back end.
+      </p>
+      <p class="leading-relaxed">
+        By decoupling front and back ends, Couper enables businesses to start their product development
+        right away and gradually modernize their existing IT infrastructure at the same time.
+      </p>
+      <p class="leading-relaxed">
+        Extract services and functionalities step by step and make them available via APIs until your legacy
+        IT is history.
+      </p>
+    </div>
+    <div>
+      <picture>
+        <source media="(min-width: 992px)" srcset="/images/modernize-desktop.svg">
+        <img src="/images/modernize-mobile-tablet.svg" alt="Diagram showing how Couper helps modernize IT infrastructure" loading="lazy" width="700" height="270">
+      </picture>
+    </div>
+  </div>
+</section>
+
+{{/* Secure Your APIs */}}
+<section class="section-wrapper" aria-label="Secure Your APIs" id="secure">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div class="hidden lg:block">
+      <picture>
+        <source media="(min-width: 992px)" srcset="/images/secure-your-api-desktop.svg">
+        <img src="/images/secure-your-api-mobile-tablet.svg" alt="Diagram showing API security with Couper" loading="lazy" width="700" height="270">
+      </picture>
+    </div>
+    <div>
+      <h2 class="h2-line h2-line-red text-xl font-medium mb-4">Secure Your APIs</h2>
+      <p class="leading-relaxed">
+        Security must play a vital part during all stages of application development, especially if the
+        app is supposed to access critical business data and resources.
+      </p>
+      <p class="leading-relaxed">
+        However, implementing security measures is a highly complex matter. Changes in project requirements
+        or responsibilities as well as the integration of third-party services make the work of developers
+        challenging and thus endanger the security of sensitive data.
+      </p>
+      <p class="leading-relaxed">
+        Couper offers various authentication and authorization mechanisms on a separate layer, facilitating
+        security implementation and ensuring the protection of your systems.
+      </p>
+    </div>
+    <div class="lg:hidden">
+      <img src="/images/secure-your-api-mobile-tablet.svg" alt="Diagram showing API security with Couper" loading="lazy" width="700" height="270">
+    </div>
+  </div>
+</section>
+
+{{/* Target Your Audience */}}
+<section class="section-wrapper" aria-label="Target Your Audience" id="prepare">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="h2-line h2-line-orange text-xl font-medium mb-4">Target Your Audience</h2>
+      <p class="leading-relaxed">
+        Too many applications are overloaded with features because they are supposed to
+        simultaneously address the challenges of various target groups:
+        just think of power users and regular users and their different needs when it
+        comes to required functionalities or data.
+      </p>
+      <p class="leading-relaxed">
+        Dedicated micro products can offer outstanding user experiences and enable you to
+        meet the needs of your distinct user groups. However, replicating functionality and
+        service integration seems to be a daunting task. Because the decoupling of front
+        and back end implies big challenges, projects all too often take the route to a
+        one-size-fits-no-one middle ground.
+      </p>
+      <p class="leading-relaxed">
+        With Couper, you can design dedicated front-end APIs that help you launch new
+        products and specific user interfaces to your existing systems and services in a
+        short amount of time.
+      </p>
+    </div>
+    <div>
+      <picture>
+        <source media="(min-width: 992px)" srcset="/images/more-than-one-desktop.svg">
+        <img src="/images/more-than-one-mobile-tablet.svg" alt="Diagram showing multiple audience targeting with Couper" loading="lazy" width="700" height="270">
+      </picture>
+    </div>
+  </div>
+</section>
+
+{{/* CTA */}}
+<section class="section-wrapper" aria-label="Get in touch">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-xl font-medium mb-4">What Can We Do For You?</h2>
+    <p class="leading-relaxed">
+      With 20+ years of experience, Couper solves your digital transformation challenges. We understand
+      the complexity of modern markets and develop customized solutions. With Couper, we have already
+      successfully implemented over a dozen projects for our clients.
+    </p>
+    <p class="mt-6">
+      <a href="https://github.com/coupergateway/couper" target="_blank" rel="noopener noreferrer" class="cta">
+        Contact us on GitHub
+      </a>
+    </p>
+  </div>
+</section>
+{{ end }}

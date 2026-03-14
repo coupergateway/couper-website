@@ -1,0 +1,146 @@
+{{ define "main" }}
+{{/* Hero */}}
+<section class="section-wrapper text-center" aria-label="OIDC Gateway hero">
+  <div class="flex justify-center mb-4">
+    <div class="w-[80px] h-[80px]">
+      {{ partial "svg/icon-openid.html" }}
+    </div>
+  </div>
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-2xl font-medium mb-4">Couper OpenID Connect Gateway</h1>
+    <p class="leading-relaxed">
+      If you are a system administrator and want to implement Zero Trust in your infrastructure, learn about Couper's ready-to-use OpenID Connect (OIDC) Gateway.<br>
+      It verifies the identity of an end-user based on the (two-factor) authentication performed by your OpenID Provider.
+    </p>
+    <p class="mt-6">
+      <a href="https://github.com/coupergateway/couper-oidc-gateway" target="_blank" rel="noopener noreferrer" class="cta">Gateway Repository</a>
+    </p>
+  </div>
+</section>
+
+{{/* How It Works */}}
+<section class="section-wrapper" aria-label="How It Works">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <div>
+      <h2 class="h2-line h2-line-purple text-xl font-medium mb-4">How It Works</h2>
+      <p class="leading-relaxed">
+        Couper's OIDC Gateway adds a new access control layer to Web applications and services.
+        It is placed between Internet users and the application
+        running in your network. No changes to the application are required. Therefore it is especially suitable for commercial off-the-shelve software (COTS) or legacy systems.
+      </p>
+      <p class="leading-relaxed">
+        Users connecting to your application must first authenticate themselves against an Identity Provider like Google API, Azure AD, Keycloak etc.
+        Then, Couper OIDC Gateway will only allow verified users to access the secured application.
+      </p>
+      <p class="leading-relaxed">
+        In addition to securing applications in your network, e.g. as an alternative to VPN, the Couper OIDC gateway can help you comply with security policies such as multi-factor authentication (MFA).
+      </p>
+    </div>
+    <div class="mt-8">
+      <img src="/images/OIDC.png" alt="OIDC Gateway architecture diagram" loading="lazy" width="500" height="400">
+    </div>
+  </div>
+</section>
+
+{{/* Configuration Step-By-Step */}}
+<section class="section-wrapper" aria-label="Configuration steps">
+  <div class="tile-border">
+    <div class="text-center mb-8">
+      <h2 class="text-xl font-medium mb-3">Configuration Step-By-Step</h2>
+      <p class="leading-relaxed">The Couper OIDC gateway only needs a few configuration settings to work:</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-lg font-medium mb-2">Step 1</h3>
+        <p class="leading-relaxed">
+          Login to your OpenID Provider (Google, Keycloak, Azure AD, ...) and create a configuration for a <em>Relying party</em>. (Depending on the product this could also be called client, application or connection).
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium mb-2">Step 2</h3>
+        <p class="leading-relaxed">
+          Configure the <em>callback URL</em> &ndash; where the Couper gateway is running.
+          Note the provided <em>Client ID</em> and <em>Client Secret</em>.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium mb-2">Step 3</h3>
+        <p class="leading-relaxed">
+          Configure the Couper OIDC gateway with the OpenID provider's <em>OpenID configuration URL</em>,
+          and the Client credentials from step 2.
+          You have to generate a <em>token secret</em> and tell Couper how to connect to the actual application (<em>origin</em>) to be protected.
+        </p>
+        <p class="leading-relaxed">Done. That's all it takes!</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="https://github.com/coupergateway/couper-oidc-gateway" target="_blank" rel="noopener noreferrer" class="cta">Get Started</a>
+    </div>
+  </div>
+</section>
+
+{{/* Why You Should Use It - Zero Trust */}}
+<section class="section-wrapper" aria-label="Zero Trust benefits">
+  <div class="mb-6">
+    <h2 class="h2-line h2-line-blue text-xl font-medium">Why You Should Use Couper's OIDC Gateway</h2>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div>
+      <h3 class="text-lg font-medium mb-3">Bye-bye VPN...</h3>
+      <p class="leading-relaxed">
+        For years virtual private networks (VPNs) were used to
+        create Intranets or company networks to run applications
+        for employees that should not be used by outsiders. They
+        often grow into one big network zone where many services run.
+      </p>
+      <p class="leading-relaxed">
+        They create a false impression of security:
+        The network is protected, so applications running there
+        are automatically secure, too.
+      </p>
+      <p class="leading-relaxed">
+        The principle of least privilege mandates that access
+        rights should be given deliberately.
+        With remote and hybrid work models proliferating and
+        increased collaboration with external contractors, it becomes
+        nearly impossible to follow that rule, given access to a
+        VPN opens up an entire network.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-lg font-medium mb-3">...hello Zero Trust!</h3>
+      <p class="leading-relaxed">
+        Zero trust architectures work differently:
+        They don't base trust on network connectivity or location.
+        Every user needs to authorize with every service first &ndash;
+        even if they are employees and use the office's local network.
+      </p>
+      <p class="leading-relaxed">
+        To manage the amount of permissions necessary to map all users'
+        privileges to their applications, usually central systems
+        providing identity and authorization services are
+        deployed. They are often used together with enterprise
+        user databases like Active Directories. Assigning
+        permissions via group keeps everything manageable.
+      </p>
+      <p class="leading-relaxed">
+        The Couper OIDC Gateway helps you to apply the Zero Trust
+        model in your infrastructure. It restricts access to
+        applications based on the identity of the user. The
+        authentication is delegated to an OIDC identity provider.
+      </p>
+    </div>
+  </div>
+</section>
+
+{{/* What is OIDC */}}
+<section class="section-wrapper" aria-label="What is OpenID Connect">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xl font-medium mb-4">What is OpenID Connect?</h2>
+    <p class="leading-relaxed">
+      <a href="https://openid.net/connect/" target="_blank" rel="noopener noreferrer">OpenID Connect</a> (OIDC) is an identity layer built upon the <a href="https://oauth.net/2/" target="_blank" rel="noopener noreferrer">OAuth 2.0</a> authorization framework.
+      It combines the capability of Open ID in verifying the client's identity and OAuth's capability of accessing the client's resources.
+    </p>
+  </div>
+</section>
+{{ end }}

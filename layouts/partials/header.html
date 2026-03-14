@@ -1,0 +1,61 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-[0_5px_10px_0_#cbcbcb]" id="site-header">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-2">
+    <div class="flex items-center justify-between h-[56px]">
+      {{/* Logo */}}
+      <a href="/" class="flex items-center gap-2 no-underline hover:no-underline flex-shrink-0" aria-label="Couper home">
+        <span class="w-[32px] h-[36px] flex-shrink-0 [&>svg]:w-full [&>svg]:h-full">
+          {{ partial "svg/couper-logo.html" }}
+        </span>
+        <span class="text-lg font-semibold text-black">Couper</span>
+      </a>
+
+      {{/* Desktop Navigation */}}
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+        {{ $currentPath := .RelPermalink }}
+        <a href="/use-cases/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/use-cases/" }}text-green{{ else }}text-black hover:text-green{{ end }}">Use Cases</a>
+        <a href="/features/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/features/" }}text-green{{ else }}text-black hover:text-green{{ end }}">Features</a>
+        <a href="/docs/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/docs/" }}text-green{{ else }}text-black hover:text-green{{ end }}">Docs</a>
+        <a href="/open-id-connect-gateway/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/open-id-connect-gateway/" }}text-green{{ else }}text-black hover:text-green{{ end }}">OIDC Gateway</a>
+        <a href="https://github.com/coupergateway/couper/" target="_blank" rel="noopener noreferrer" class="cta">
+          View on GitHub
+          {{ partial "svg/icon-github.html" }}
+        </a>
+      </nav>
+
+      {{/* Mobile menu button */}}
+      <button class="menu-toggle flex lg:hidden" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    {{/* Mobile Navigation */}}
+    <nav class="hidden lg:hidden" id="mobile-menu" aria-label="Mobile navigation">
+      <div class="flex flex-col items-center gap-5 py-5">
+        <a href="/use-cases/" class="text-base font-medium text-black no-underline hover:text-green">Use Cases</a>
+        <a href="/features/" class="text-base font-medium text-black no-underline hover:text-green">Features</a>
+        <a href="/docs/" class="text-base font-medium text-black no-underline hover:text-green">Docs</a>
+        <a href="/open-id-connect-gateway/" class="text-base font-medium text-black no-underline hover:text-green">OIDC Gateway</a>
+        <a href="https://github.com/coupergateway/couper/" target="_blank" rel="noopener noreferrer" class="cta">
+          View on GitHub
+          {{ partial "svg/icon-github.html" }}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+(function() {
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    toggle.classList.toggle('active');
+    menu.classList.toggle('hidden');
+  });
+})();
+</script>
