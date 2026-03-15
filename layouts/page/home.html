@@ -135,10 +135,110 @@
   </div>
 </section>
 
+{{/* Frequently Asked Questions */}}
+<section class="section-wrapper" aria-label="Frequently Asked Questions">
+  <div class="max-w-3xl">
+    <h2 class="h2-line h2-line-purple text-xl font-medium mb-6">Frequently Asked Questions</h2>
+    <dl class="space-y-6">
+      <div>
+        <dt class="font-medium mb-2">What is Couper?</dt>
+        <dd class="leading-relaxed">
+          Couper is a lightweight, open source API gateway written in Go. Available at
+          <a href="https://couper.io">couper.io</a>, it helps developers build and operate
+          API-driven web projects by handling routing, access control, and upstream connectivity
+          in a simple HCL configuration file.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-medium mb-2">Is Couper free to use?</dt>
+        <dd class="leading-relaxed">
+          Yes, Couper is free and open source software, licensed under the Apache 2.0 License. The
+          source code is available on <a href="https://github.com/coupergateway/couper" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-medium mb-2">How do I install Couper?</dt>
+        <dd class="leading-relaxed">
+          Couper is available as a <a href="https://hub.docker.com/r/coupergateway/couper">Docker container image</a>,
+          as a binary from <a href="https://github.com/coupergateway/couper/releases/latest" target="_blank" rel="noopener noreferrer">GitHub releases</a>,
+          or via Homebrew: <code>brew tap coupergateway/couper && brew install couper</code>.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-medium mb-2">Where can I find the Couper documentation?</dt>
+        <dd class="leading-relaxed">
+          The full documentation is available at <a href="https://docs.couper.io" target="_blank" rel="noopener noreferrer">docs.couper.io</a>.
+          You can also explore ready-to-use examples in the
+          <a href="https://github.com/coupergateway/couper-examples" target="_blank" rel="noopener noreferrer">example repository</a>.
+        </dd>
+      </div>
+      <div>
+        <dt class="font-medium mb-2">What makes Couper different from other API gateways?</dt>
+        <dd class="leading-relaxed">
+          Couper focuses on developer experience with a simple, declarative HCL configuration.
+          It is lightweight, cloud native, and purpose-built for front-end API development —
+          combining routing, access control, and observability in a single component with a
+          small resource footprint.
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+{{/* FAQ Schema */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Couper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Couper is a lightweight, open source API gateway written in Go. Available at couper.io, it helps developers build and operate API-driven web projects by handling routing, access control, and upstream connectivity in a simple HCL configuration file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Couper free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Couper is free and open source software, licensed under the Apache 2.0 License. The source code is available on GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I install Couper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Couper is available as a Docker container image, as a binary from GitHub releases, or via Homebrew: brew tap coupergateway/couper && brew install couper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find the Couper documentation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The full documentation is available at docs.couper.io. You can also explore ready-to-use examples in the example repository on GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Couper different from other API gateways?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Couper focuses on developer experience with a simple, declarative HCL configuration. It is lightweight, cloud native, and purpose-built for front-end API development — combining routing, access control, and observability in a single component with a small resource footprint."
+      }
+    }
+  ]
+}
+</script>
+
 {{/* Do You Have Questions? */}}
 <section class="section-wrapper" aria-label="Do You Have Questions?">
   <div class="max-w-2xl">
-    <h2 class="h2-line h2-line-purple text-xl font-medium mb-4">Do You Have Questions?</h2>
+    <h2 class="h2-line text-xl font-medium mb-4">Do You Have Questions?</h2>
     <p class="leading-relaxed">
       With 20+ years of experience, Couper solves your digital transformation challenges. We understand
       the complexity of modern markets and develop customized solutions.
