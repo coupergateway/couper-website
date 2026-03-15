@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green: #65B32E;
+  --color-green-light: #A9D393;
+  --color-green-dark: #4f8f26;
+  --color-blue: #3EA1C1;
+  --color-purple: #AA64AA;
+  --color-orange: #F6AB1F;
+  --color-red: #EB3D3E;
+  --color-gray-light: #E8E8E8;
+  --color-gray: #cbcbcb;
+  --color-gray-dark: #848585;
+  --color-black: #1A1B1C;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1440px;
+
+  --font-sans: "Work Sans", sans-serif;
+}
+
+/* Work Sans font faces - latin subset (covers all weights 300-600 as variable font) */
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("/fonts/work-sans/work-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Work Sans font faces - latin-ext subset */
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("/fonts/work-sans/work-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+/* Base styles — 3 font sizes: body 1rem, subhead 1.25rem, title 1.5rem */
+html {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--color-black);
+}
+
+body {
+  margin: 0;
+  padding-top: 72px;
+}
+
+a {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.6;
+}
+
+code {
+  background-color: #eff1f5;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #4c4f69;
+}
+
+/* Code blocks — plain pre (non-Chroma) */
+pre {
+  background-color: #eff1f5;
+  color: #4c4f69;
+  border: 1px solid #ccd0da;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Chroma syntax highlighting — Catppuccin Latte (matching docs.couper.io) */
+.highlight pre {
+  background-color: #eff1f5;
+  color: #4c4f69;
+  border: 1px solid #ccd0da;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.highlight pre code { background: none; padding: 0; color: inherit; }
+
+/* Chroma token classes */
+.chroma .c,   /* Comment */
+.chroma .ch,  /* Comment.Hashbang */
+.chroma .cm,  /* Comment.Multiline */
+.chroma .c1,  /* Comment.Single */
+.chroma .cs { /* Comment.Special */
+  color: #9ca0b0;
+  font-style: italic;
+}
+.chroma .k,   /* Keyword */
+.chroma .kc,  /* Keyword.Constant */
+.chroma .kd,  /* Keyword.Declaration */
+.chroma .kn,  /* Keyword.Namespace */
+.chroma .kp,  /* Keyword.Pseudo */
+.chroma .kr,  /* Keyword.Reserved */
+.chroma .kt { /* Keyword.Type */
+  color: #8839ef;
+}
+.chroma .s,   /* String */
+.chroma .sa,  /* String.Affix */
+.chroma .sb,  /* String.Backtick */
+.chroma .sc,  /* String.Char */
+.chroma .dl,  /* String.Delimiter */
+.chroma .sd,  /* String.Doc */
+.chroma .s2,  /* String.Double */
+.chroma .se,  /* String.Escape */
+.chroma .sh,  /* String.Heredoc */
+.chroma .si,  /* String.Interpol */
+.chroma .sx,  /* String.Other */
+.chroma .sr,  /* String.Regex */
+.chroma .s1,  /* String.Single */
+.chroma .ss { /* String.Symbol */
+  color: #40a02b;
+}
+.chroma .m,   /* Number */
+.chroma .mb,  /* Number.Bin */
+.chroma .mf,  /* Number.Float */
+.chroma .mh,  /* Number.Hex */
+.chroma .mi,  /* Number.Integer */
+.chroma .il,  /* Number.Integer.Long */
+.chroma .mo { /* Number.Oct */
+  color: #fe640b;
+}
+.chroma .na { /* Name.Attribute */
+  color: #df8e1d;
+}
+.chroma .nb { /* Name.Builtin */
+  color: #d20f39;
+}
+.chroma .nf,  /* Name.Function */
+.chroma .fm { /* Name.Function.Magic */
+  color: #1e66f5;
+}
+.chroma .nl { /* Name.Label */
+  color: #1e66f5;
+}
+.chroma .nn { /* Name.Namespace */
+  color: #df8e1d;
+}
+.chroma .o,   /* Operator */
+.chroma .ow { /* Operator.Word */
+  color: #04a5e5;
+}
+.chroma .p {  /* Punctuation */
+  color: #4c4f69;
+}
+.chroma .err { /* Error */
+  color: #d20f39;
+}
+
+/* Section wrapper - consistent spacing */
+.section-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-wrapper {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+/* Color line accents for headings */
+.h2-line {
+  display: inline-block;
+  padding-bottom: 0.3em;
+  border-bottom: 3px solid var(--color-green);
+}
+
+.h2-line-blue {
+  border-bottom-color: var(--color-blue);
+}
+
+.h2-line-orange {
+  border-bottom-color: var(--color-orange);
+}
+
+.h2-line-purple {
+  border-bottom-color: var(--color-purple);
+}
+
+.h2-line-red {
+  border-bottom-color: var(--color-red);
+}
+
+.h2-line-green {
+  border-bottom-color: var(--color-green);
+}
+
+.h3-line {
+  display: inline-block;
+  padding-bottom: 0.2em;
+  border-bottom: 3px solid var(--color-green);
+}
+
+.h3-line-blue {
+  border-bottom-color: var(--color-blue);
+}
+
+.h3-line-orange {
+  border-bottom-color: var(--color-orange);
+}
+
+.h3-line-purple {
+  border-bottom-color: var(--color-purple);
+}
+
+.h3-line-red {
+  border-bottom-color: var(--color-red);
+}
+
+/* Feature tile border */
+.tile-border {
+  border: 1px solid var(--color-gray);
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: white;
+}
+
+/* CTA button */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+  background-color: var(--color-green);
+  color: white;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cta:hover,
+.cta:focus {
+  background-color: var(--color-green-dark);
+  text-decoration: none;
+}
+
+.cta svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.checklist li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.2em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2365B32E'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Icon containers for use-cases page */
+.icon-large {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.icon-large svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Nav links */
+.nav-link {
+  position: relative;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--color-green);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link-active {
+  color: var(--color-green);
+}
+
+.nav-link-active::after {
+  transform: scaleX(1);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-black);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

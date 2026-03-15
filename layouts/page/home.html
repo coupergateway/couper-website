@@ -1,0 +1,153 @@
+{{ define "main" }}
+{{/* Hero */}}
+<section class="section-wrapper" aria-label="Hero">
+  <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-8 items-center">
+    <div class="w-[180px] h-[200px] mx-auto sm:mx-0 [&>svg]:w-full [&>svg]:h-full">
+      {{ partial "svg/couper-logo.html" }}
+    </div>
+    <div>
+      <h1 class="text-2xl font-medium mb-4">Meet Couper</h1>
+      <p class="leading-relaxed mb-6">
+        Couper is a lightweight open source API gateway designed to support developers in
+        building and running API-driven Web projects.
+      </p>
+      <a href="/docs/#getting-started" class="cta">Get Started</a>
+    </div>
+  </div>
+</section>
+
+{{/* The Challenge of Digitalization */}}
+<section class="section-wrapper" aria-label="The Challenge of Digitalization">
+  <div class="max-w-2xl mb-8">
+    <h2 class="h2-line text-xl font-medium mb-4">The Challenge of Digitalization</h2>
+    <p class="leading-relaxed">
+      Existing IT infrastructures make it hard for many organizations to meet growing customer
+      expectations while at the same time maintaining pace and quality.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <div>
+      <h3 class="text-lg font-medium mb-3">
+        The foundation:<br>your existing infrastructure
+      </h3>
+      <p class="leading-relaxed">
+        Having grown over the years, your existing infrastructure is likely to consist of different IT
+        systems, functioning processes, and different teams. This living microcosm is the foundation of
+        your digital products.
+      </p>
+      <p class="leading-relaxed">
+        Companies have to provide flexible interfaces to their existing data and processes.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-lg font-medium mb-3">
+        The demand:<br>convincing applications
+      </h3>
+      <p class="leading-relaxed">
+        Due to rapid technological advancements, changing social trends and large online platforms providing
+        outstanding customer experiences, consumers nowadays have very high standards when it comes to digital
+        applications and services.
+      </p>
+      <p class="leading-relaxed">
+        To meet their expectations, companies must be able to bring appealing products to market quickly.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-lg font-medium mb-3">
+        The challenge:<br>delivering quality in time
+      </h3>
+      <p class="leading-relaxed">
+        Adapting your existing infrastructure to steadily changing market demands can have a significant
+        impact on your entire organization. All too often, this results in long development cycles and
+        late product launch.
+      </p>
+      <p class="leading-relaxed">
+        To clear the path for a sustainable digitalization, you need a flexible solution that allows you
+        to bypass given dependencies.
+      </p>
+    </div>
+  </div>
+</section>
+
+{{/* Couper Supports Your Digital Journey */}}
+<section class="section-wrapper" aria-label="Couper Supports Your Digital Journey">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="h2-line h2-line-orange text-xl font-medium mb-4">Couper Supports Your Digital Journey</h2>
+      <p class="leading-relaxed">
+        The Couper architecture creates a flexible connection between digital products and your existing
+        infrastructure.
+      </p>
+      <p class="leading-relaxed">
+        This allows you to retain proven systems and processes while building apps much faster and delivering
+        immediate value to your customers.
+      </p>
+      <p class="leading-relaxed mt-4">
+        <a href="/use-cases/" class="cta">Browse Use Cases</a>
+      </p>
+    </div>
+    <div>
+      <picture>
+        <source media="(min-width: 992px)" srcset="/images/home-desktop.svg">
+        <img src="/images/home-mobile-tablet.svg" alt="Couper connects existing infrastructure with new digital products" loading="lazy" width="700" height="270">
+      </picture>
+    </div>
+  </div>
+</section>
+
+{{/* Developed for Your Needs */}}
+<section class="section-wrapper" aria-label="Developed for Your Needs">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-xl font-medium mb-4">Developed for Your Needs</h2>
+    <p class="leading-relaxed">
+      With 20 years of experience, Couper was developed to support your tactical customer interface
+      development and at the same time enable your strategic system modernization.
+    </p>
+    <p class="leading-relaxed">
+      Couper is precisely tailored to the needs of front-end development and pays special attention to the
+      non-functional requirements of the customer.
+    </p>
+  </div>
+</section>
+
+{{/* Your Benefits with Couper */}}
+<section class="section-wrapper" aria-label="Your Benefits with Couper">
+  <div class="mb-6">
+    <h2 class="h2-line h2-line-blue text-xl font-medium">Your Benefits with Couper</h2>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div>
+      <ul class="checklist">
+        <li>Gain fast and flexible development of single page applications through the provision of dedicated front-end APIs</li>
+        <li>Obtain architectural prerequisites for a parallel, step-by-step modernization of your back-end systems</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="checklist">
+        <li>Add security and observability to your project and meet all non-functional requirements</li>
+        <li>Connect legacy IT and delight your developers with modern technology</li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center mt-8">
+    <a href="/use-cases/" class="cta">Explore Use Cases</a>
+  </div>
+</section>
+
+{{/* Do You Have Questions? */}}
+<section class="section-wrapper" aria-label="Do You Have Questions?">
+  <div class="max-w-2xl">
+    <h2 class="h2-line h2-line-purple text-xl font-medium mb-4">Do You Have Questions?</h2>
+    <p class="leading-relaxed">
+      With 20+ years of experience, Couper solves your digital transformation challenges. We understand
+      the complexity of modern markets and develop customized solutions.
+    </p>
+    <p class="mt-4">
+      <a href="https://github.com/coupergateway/couper" target="_blank" rel="noopener noreferrer" class="cta">
+        Contact us on GitHub
+      </a>
+    </p>
+  </div>
+</section>
+{{ end }}

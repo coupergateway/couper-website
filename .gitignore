@@ -2,3 +2,6 @@ node_modules/
 .cache/
 .env
 /public
+/resources/
+.hugo_build.lock
+.playwright-cli/

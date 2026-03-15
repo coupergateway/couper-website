@@ -1,0 +1,30 @@
+baseURL = "https://couper.io/"
+languageCode = "en"
+title = "Couper"
+enableRobotsTXT = false
+disableKinds = ["taxonomy", "term"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
+[params]
+  description = "Build digital products faster and deliver immediate value to your customers. Couper supports developers in building and running API-driven Web projects."
+  siteURL = "https://couper.io"
+
+[build]
+  [build.buildStats]
+    enable = true
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[security]
+  [security.http]
+    methods = ["(?i)GET|POST"]
+    urls = [".*"]

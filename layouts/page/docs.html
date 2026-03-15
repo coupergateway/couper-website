@@ -1,0 +1,273 @@
+{{ define "main" }}
+{{/* Overview */}}
+<section class="section-wrapper" aria-label="Documentation overview">
+  <div>
+    <h2 class="h2-line h2-line-blue text-xl font-medium mb-4">Overview</h2>
+    <p class="leading-relaxed">
+      Couper is a lightweight open-source API gateway that acts as an entry point for clients to
+      your application and an exit point to upstream services.
+    </p>
+    <p class="leading-relaxed">
+      It adds access control, observability, and back-end
+      connectivity on a separate layer. This will keep your core application code simpler.
+    </p>
+    <p class="leading-relaxed">
+      Couper does not need any special development skills and offers easy configuration and integration.
+    </p>
+    <p class="mt-4">
+      <a href="https://docs.couper.io/" target="_blank" rel="noopener noreferrer" class="cta">Visit docs.couper.io</a>
+    </p>
+  </div>
+  <div class="mt-8">
+    <picture>
+      <source media="(min-width: 640px)" srcset="/images/overview-tablet-desktop.svg">
+      <img src="/images/overview-mobile.svg" alt="Couper architecture overview" loading="lazy" width="800" height="300">
+    </picture>
+  </div>
+</section>
+
+{{/* Getting Started */}}
+<section class="section-wrapper" aria-label="Getting started" id="getting-started">
+  <div>
+    <h1 class="text-2xl font-medium mb-6">Getting Started</h1>
+    <p class="leading-relaxed">
+      Couper is available as
+      <a href="https://github.com/coupergateway/couper-examples/tree/master/docker" target="_blank" rel="noopener noreferrer">container image</a>
+      or as binary from the <a href="https://github.com/coupergateway/couper/releases/latest" target="_blank" rel="noopener noreferrer">latest release on GitHub.</a>
+    </p>
+    <p class="leading-relaxed">
+      To download/install Couper with
+      <a href="https://brew.sh/" target="_blank" rel="noopener noreferrer">homebrew</a>,
+      open your terminal and execute:
+    </p>
+    <pre class="my-4"><code>$ brew tap coupergateway/couper && brew install couper</code></pre>
+    <p class="leading-relaxed">
+      Couper needs a configuration file to know what to do.
+      Create an empty <code>couper.hcl</code> file.
+    </p>
+    <p class="leading-relaxed">
+      Copy/paste the following configuration to the file and save it:
+    </p>
+    {{ $helloWorld := readFile "data/examples/hello_world.hcl" }}
+    {{ highlight $helloWorld "hcl" "" }}
+
+    <p class="leading-relaxed mt-4">Then start Couper:</p>
+    <pre class="my-4"><code>$ couper run -f couper.hcl</code></pre>
+    <pre class="my-4"><code>{"level":"info","message":"couper is serving: 0.0.0.0:8080","timestamp":"2022-01-03T04:20:00+01:00","type":"couper_daemon"}</code></pre>
+    <p class="leading-relaxed">
+      Now Couper is serving on your computer's port <code>8080</code>.
+      Point your browser or <code>curl</code> to
+      <a href="http://localhost:8080/">http://localhost:8080/</a>
+      to see what's going on.
+    </p>
+    <p class="leading-relaxed">
+      Press <code>CTRL+c</code> to stop the process. Visit the Couper
+      <a href="https://github.com/coupergateway/couper/tree/master/docs" target="_blank" rel="noopener noreferrer">repository</a>
+      for reference or go on with the
+      <a href="https://github.com/coupergateway/couper-examples" target="_blank" rel="noopener noreferrer">examples</a>.
+    </p>
+  </div>
+</section>
+
+{{/* Beautiful Config + Example Repo */}}
+<section class="section-wrapper" aria-label="Configuration and examples">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="tile-border">
+      <h2 class="h2-line text-xl font-medium mb-3">Beautiful Configuration</h2>
+      <p class="leading-relaxed">
+        The syntax of the configuration file is based on HCL 2.0, a configuration language by HashiCorp.<br><br>
+        The result is easy to read, yet powerful and expressive.
+      </p>
+      <p class="mt-4">
+        <a href="https://marketplace.visualstudio.com/items?itemName=couper.couperconf" target="_blank" rel="noopener noreferrer" class="cta">Get VS Code Extension</a>
+      </p>
+    </div>
+    <div class="tile-border">
+      <h2 class="h2-line h2-line-blue text-xl font-medium mb-3">Full Example Repository</h2>
+      <p class="leading-relaxed">
+        Our example repository consists of small, ready-to-use examples that guide you through the
+        configuration step by step. Configure your file and SPA serving, create virtual endpoints,
+        group them in APIs, and protect them with JSON Web Tokens.
+      </p>
+      <p class="mt-4">
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/" target="_blank" rel="noopener noreferrer" class="cta">Full Example Repository</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{{/* Configuration Examples */}}
+<section class="section-wrapper" aria-label="Configuration examples">
+  <div class="mb-8">
+    <h2 class="h2-line h2-line-purple text-xl font-medium mb-4">Configuration Examples</h2>
+    <p class="leading-relaxed">
+      The following examples are intended to give you a glance of Couper's core concepts and functionality.
+      See for yourself what a few lines of configuration can do for you.
+    </p>
+  </div>
+
+  {{/* SPA Web serving */}}
+  {{ $webServing := readFile "data/examples/web_serving.hcl" }}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-start">
+    <div class="hidden lg:block">
+      {{ highlight $webServing "hcl" "" }}
+    </div>
+    <div>
+      <h3 class="text-lg font-medium mb-3">SPA Web serving</h3>
+      <p class="leading-relaxed">
+        Every web application begins with a client loading an HTML page.
+        That's why Couper contains a web server for simple file serving.
+        Couper also takes care of the more complex web serving of SPA assets.
+      </p>
+      <p class="leading-relaxed">
+        The <code>files</code> block configures Couper's file server. It needs to know which directory to serve (<code>document_root</code>). That's all it takes!
+      </p>
+      <p class="leading-relaxed">
+        The <code>spa</code> block is responsible for serving the bootstrap document for all paths that match the paths list.
+      </p>
+      <div class="lg:hidden my-4">
+        {{ highlight $webServing "hcl" "" }}
+      </div>
+      <p class="mt-4">
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/simple-fileserving" target="_blank" rel="noopener noreferrer" class="cta">Browse Full Example</a>
+      </p>
+    </div>
+  </div>
+
+  {{/* Proxy API requests */}}
+  {{ $proxy := readFile "data/examples/proxy.hcl" }}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-start">
+    <div>
+      <h3 class="text-lg font-medium mb-3">Proxy API requests</h3>
+      <p class="leading-relaxed">
+        Most modern web applications use APIs to get information for display, trigger actions,
+        or check if a user is authorized to see or do certain things. These APIs may be part of
+        your application or a third-party service running elsewhere.
+      </p>
+      <p class="leading-relaxed">
+        This basic configuration defines an upstream backend service (<code>https://httpbin.org</code>)
+        and "mounts" it on the local API endpoint <code>/public/**</code>.
+      </p>
+      <div class="lg:hidden my-4">
+        {{ highlight $proxy "hcl" "" }}
+      </div>
+      <p class="mt-4">
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/api-proxy" target="_blank" rel="noopener noreferrer" class="cta">Browse Full Example</a>
+      </p>
+    </div>
+    <div class="hidden lg:block">
+      {{ highlight $proxy "hcl" "" }}
+    </div>
+  </div>
+
+  {{/* JWT access control */}}
+  {{ $jwt := readFile "data/examples/jwt_validation.hcl" }}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-start">
+    <div class="hidden lg:block">
+      {{ highlight $jwt "hcl" "" }}
+    </div>
+    <div>
+      <h3 class="text-lg font-medium mb-3">JWT access control</h3>
+      <p class="leading-relaxed">
+        Most certainly, you don't want anyone to use your application without permission.
+      </p>
+      <p class="leading-relaxed">
+        Couper offers JWT access control: configure your access control in the <code>definitions</code>
+        block and secure your private endpoint by referencing the label.
+      </p>
+      <div class="lg:hidden my-4">
+        {{ highlight $jwt "hcl" "" }}
+      </div>
+      <p class="mt-4">
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/jwt-access-control" target="_blank" rel="noopener noreferrer" class="cta">Browse Full Example</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{{/* Reasons for Couper */}}
+<section class="section-wrapper" aria-label="Reasons for Couper">
+  <div class="text-center mb-8">
+    <h2 class="text-xl font-medium">Reasons for Couper</h2>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <ul class="checklist">
+      <li>Intuitive Configuration</li>
+      <li>Open Source</li>
+    </ul>
+    <ul class="checklist">
+      <li>Language Independent</li>
+      <li>Don't Reinvent the Wheel</li>
+    </ul>
+    <ul class="checklist">
+      <li>IDE Extension Available</li>
+      <li>Easy Integration</li>
+    </ul>
+    <ul class="checklist">
+      <li>Cloud Native</li>
+      <li>Painless Re-Architecting</li>
+    </ul>
+  </div>
+</section>
+
+{{/* Changelog + Simple Integration */}}
+<section class="section-wrapper" aria-label="Changelog and integration" id="changelog">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    {{/* Changelog */}}
+    <div>
+      <h2 class="h2-line h2-line-green text-xl font-medium mb-4">Changelog</h2>
+      <div id="changelog-content">
+        <p class="text-gray-dark">Loading changelog...</p>
+      </div>
+      <script>
+      (function() {
+        var el = document.getElementById('changelog-content');
+        fetch('https://api.github.com/repos/coupergateway/couper/releases/latest')
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            var date = data.published_at ? ' (last updated: ' + data.published_at.split('T')[0] + ')' : '';
+            var body = data.body || 'No content';
+            body = body.replace(/(<([^>]+)>)/ig, '');
+            body = body.replace(/\]\((?!https?:\/\/)([^\/]*)/gi, '](https://github.com/coupergateway/couper/tree/master/$1');
+            // Simple markdown rendering for links and bold
+            body = body.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+            body = body.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            body = body.replace(/^### (.+)$/gm, '<h4 class="font-medium mt-4 mb-1">$1</h4>');
+            body = body.replace(/^## (.+)$/gm, '<h3 class="font-medium mt-4 mb-1">$1</h3>');
+            body = body.replace(/^[*-] (.+)$/gm, '<li class="ml-4">$1</li>');
+            body = body.replace(/\n\n/g, '<br>');
+            el.innerHTML = '<p class="text-sm text-gray-dark mb-2">' + date + '</p>'
+              + '<div class="text-sm leading-relaxed">' + body + '</div>'
+              + '<br><a href="https://github.com/coupergateway/couper/" target="_blank" rel="noopener noreferrer" class="cta">View on GitHub <svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>';
+          })
+          .catch(function() {
+            el.innerHTML = '<p class="text-red">Could not load changelog.</p>';
+          });
+      })();
+      </script>
+    </div>
+
+    {{/* Simple Integration */}}
+    <div>
+      <h2 class="h2-line h2-line-orange text-xl font-medium mb-4">Simple Integration</h2>
+      <p class="leading-relaxed">
+        Couper releases are also provided as containers on DockerHub.
+      </p>
+      <p class="leading-relaxed">
+        They are ready to use for your Continuous Integration builds and Kubernetes deployment.
+        All settings can be configured via environment variables.
+      </p>
+      <p class="leading-relaxed">
+        Due to its small resource footprint, you have many integration options regarding
+        the required scaling or architecture setup.
+      </p>
+      <p class="leading-relaxed mt-4">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/kubernetes-configuration/README.md" target="_blank" rel="noopener noreferrer">Example: Kubernetes configuration</a>
+      </p>
+      <p class="mt-6">
+        <a href="https://hub.docker.com/r/coupergateway/couper" target="_blank" rel="noopener noreferrer" class="cta">Get Docker Image</a>
+      </p>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,175 @@
+{{ define "main" }}
+{{/* Hero */}}
+<section class="section-wrapper" aria-label="Features overview">
+  <div class="max-w-3xl">
+    <h1 class="text-2xl font-medium mb-4">Discover Couper</h1>
+    <p class="leading-relaxed">
+      Couper is a lightweight API gateway for developers. It reduces the complexity of
+      the core application code by adding access control, observability and service connectivity
+      on a separate architectural component.
+    </p>
+  </div>
+</section>
+
+{{/* Feature Cards */}}
+<section class="section-wrapper" aria-label="Feature details">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    {{/* HTTP Request Routing */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-orange text-lg font-medium mb-3">HTTP Request Routing / Forwarding</h3>
+      <p class="leading-relaxed">
+        Couper is a proxy component forwarding requests and responses bidirectionally between
+        clients and upstream services.
+        Create virtual endpoints and configure the upstream URLs based on the original client request.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/api-proxy/README.md" target="_blank" rel="noopener noreferrer">Example: Proxy API Requests</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/sequences/README.md" target="_blank" rel="noopener noreferrer">Example: Request Sequences</a>
+      </p>
+    </div>
+
+    {{/* Custom Requests and Responses */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-blue text-lg font-medium mb-3">Custom Requests and Responses</h3>
+      <p class="leading-relaxed">
+        Couper is more than a proxy component as it lets you define custom requests to any remote
+        or upstream service. You can also send custom responses back to the client.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/custom-requests/README.md" target="_blank" rel="noopener noreferrer">Example: Custom Requests</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/multiple-requests" target="_blank" rel="noopener noreferrer">Example: Multiple Requests</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/static-responses" target="_blank" rel="noopener noreferrer">Example: Static Responses</a>
+      </p>
+    </div>
+
+    {{/* Request / Response Manipulation */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-purple text-lg font-medium mb-3">Request / Response Manipulation</h3>
+      <p class="leading-relaxed">
+        Couper lets you decide which headers and path parameters you want to send to the upstream
+        service and which headers you want to send back to the client.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/path-params/README.md" target="_blank" rel="noopener noreferrer">Example: Path Parameters</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/query/README.md" target="_blank" rel="noopener noreferrer">Example: Query Parameters</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/sending-json" target="_blank" rel="noopener noreferrer">Example: Sending JSON Content</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/tree/master/sending-form" target="_blank" rel="noopener noreferrer">Example: Sending Form Content</a>
+      </p>
+    </div>
+
+    {{/* Access Control */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-red text-lg font-medium mb-3">Access Control</h3>
+      <p class="leading-relaxed">
+        Couper acts as a centralized access control layer that is easy to configure. It offers
+        Basic Authentication, JWT signing, validation, and header passing as well as SAML and
+        OAuth 2.0 Client Credentials.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/jwt-access-control/README.md" target="_blank" rel="noopener noreferrer">Example: JWT Access Control</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/sending-jwt-upstream/README.md" target="_blank" rel="noopener noreferrer">Example: Sending JWT Claims Upstream</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/creating-jwt/README.md" target="_blank" rel="noopener noreferrer">Example: Creating JWT</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/saml/README.md" target="_blank" rel="noopener noreferrer">Example: Single-Sign-On with SAML</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/oauth2-client-credentials/README.md" target="_blank" rel="noopener noreferrer">Example: OAuth2 Client Credentials</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/oidc/README.md" target="_blank" rel="noopener noreferrer">Example: OIDC</a>
+      </p>
+    </div>
+
+    {{/* Configurable Service Connectivity */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-orange text-lg font-medium mb-3">Configurable Service Connectivity</h3>
+      <p class="leading-relaxed">
+        Couper helps you to overcome the challenges associated with distributed computing.
+        Fight unreliable networks and long latencies by configuring your timeouts and connection pools.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/backend-configuration/README.md" target="_blank" rel="noopener noreferrer">Example: Backend Configuration</a>
+      </p>
+    </div>
+
+    {{/* Upstream Validation & CORS */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-blue text-lg font-medium mb-3">Upstream Validation &amp; CORS</h3>
+      <p class="leading-relaxed">
+        Couper secures your communication by validating upstream requests and responses against an
+        OpenAPI 3 schema. CORS behavior can also be configured.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/backend-validation/README.md" target="_blank" rel="noopener noreferrer">Example: Backend Validation</a>
+      </p>
+    </div>
+
+    {{/* SPA & Web Serving */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-purple text-lg font-medium mb-3">SPA &amp; Web Serving</h3>
+      <p class="leading-relaxed">
+        Couper comes with a good old web server that serves static files on demand and
+        allows you to easily handle SPA bootstrap document serving.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/simple-fileserving/README.md" target="_blank" rel="noopener noreferrer">Example: Simple File Serving</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/spa-serving/README.md" target="_blank" rel="noopener noreferrer">Example: SPA Serving</a>
+      </p>
+    </div>
+
+    {{/* Error Handling */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-red text-lg font-medium mb-3">Error Handling</h3>
+      <p class="leading-relaxed">
+        Couper offers uniform error handling across different back-end services and lets you send your
+        own project-related HTML errors. You can also create custom errors.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/error-handling-ba/README.md" target="_blank" rel="noopener noreferrer">Example: Error Handling for Access Controls</a><br>
+        <a href="https://github.com/coupergateway/couper/blob/master/docs/ERRORS.md" target="_blank" rel="noopener noreferrer">Documentation: Errors</a>
+      </p>
+    </div>
+
+    {{/* Easy Configuration & Deployment */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-orange text-lg font-medium mb-3">Easy Configuration &amp; Deployment</h3>
+      <p class="leading-relaxed">
+        Couper pays special attention to developer experience: we have chosen HCL as an easily
+        understandable configuration language. Besides, we support you with the tools you require
+        but also give you the freedom you need.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/kubernetes-configuration/README.md" target="_blank" rel="noopener noreferrer">Example: Kubernetes configuration</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/docker-compose/README.md" target="_blank" rel="noopener noreferrer">Example: Using docker-compose</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/linking-docker-containers/README.md" target="_blank" rel="noopener noreferrer">Example: Linking Docker Containers</a><br>
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/env-var/README.md" target="_blank" rel="noopener noreferrer">Example: Environment Variables</a><br>
+        <a href="https://marketplace.visualstudio.com/items?itemName=couper.couperconf" target="_blank" rel="noopener noreferrer">Get the Couper Extension from the Visual Studio Marketplace</a>
+      </p>
+    </div>
+
+    {{/* Observability */}}
+    <div class="tile-border">
+      <h3 class="h3-line h3-line-blue text-lg font-medium mb-3">Observability</h3>
+      <p class="leading-relaxed">
+        Couper offers standard logs with request context IDs for analysis and monitoring and provides
+        a health check for Couper. Further monitoring can be achieved with enabled metrics and our Grafana
+        dashboard.
+      </p>
+      <p class="leading-relaxed mt-2">
+        <a href="https://github.com/coupergateway/couper-examples/blob/master/custom-logging/README.md" target="_blank" rel="noopener noreferrer">Example: Custom Logging</a><br>
+        <a href="https://github.com/coupergateway/couper/blob/master/docs/LOGS.md" target="_blank" rel="noopener noreferrer">Documentation: Logging</a><br>
+        <a href="https://github.com/coupergateway/couper/blob/master/docs/METRICS.md" target="_blank" rel="noopener noreferrer">Documentation: Metrics</a>
+      </p>
+    </div>
+  </div>
+
+  {{/* Try Couper CTA */}}
+  <div class="text-center mt-12">
+    <h2 class="text-xl font-medium mb-4">Try Couper</h2>
+    <p class="leading-relaxed max-w-2xl mx-auto">
+      Visit the
+      <a href="https://github.com/coupergateway/couper-examples" target="_blank" rel="noopener noreferrer">example repository</a>
+      to learn about Couper's features in detail.
+      If you prefer a quick dive in, have a look at our getting started tutorial.
+    </p>
+    <div class="mt-6">
+      <a href="/docs/#getting-started" class="cta">Get Started</a>
+    </div>
+  </div>
+</section>
+{{ end }}
