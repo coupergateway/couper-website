@@ -1,63 +1,52 @@
 # Couper.io Website
 
-This repository contains the source code for the https://couper.io/ Single Page Application.
+Source code for [couper.io](https://couper.io/) — the marketing and documentation site for the [Couper](https://github.com/coupergateway/couper) open source API gateway.
+
+Built with [Hugo](https://gohugo.io/) and [Tailwind CSS v4](https://tailwindcss.com/).
+
+## Prerequisites
+
+- [Hugo](https://gohugo.io/installation/) (extended edition)
+- [Node.js](https://nodejs.org/) 22+
+- [pnpm](https://pnpm.io/) 10+
 
 ## Development
 
-### 🚀 Quick start
+Install dependencies:
 
-1.  **How to start a dev setup**
+```shell
+pnpm install
+```
 
-    Clone repo, navigate into site’s directory and install.
+Start the development server:
 
-    ```shell
-    npm install
-    ```
+```shell
+pnpm dev
+```
 
-2.  **Start development build**
+The site is now running at http://localhost:1313
 
-    Then start it up.
+## Production Build
 
-    ```shell
-    npm run develop
-    ```
+```shell
+pnpm build
+```
 
-    The development site is now running at http://localhost:8000
+The output is generated in the `public/` directory.
 
-3.  **Build the production site and deliver it with e.g. Couper (https://couper.io/) **
+## Deployment
 
-    Execute the following commands:
+Pushes to `main` trigger a GitHub Actions workflow that builds the site with Hugo and deploys it to GitHub Pages.
 
-    - To build the production bundle
-    ```shell
-    npm run build
-    ```
+## Project Structure
 
-4.  **E2E Testing**
-
-    To run e2e tests navigate to /e2e
-
-    - To install
-    ```shell
-    npm install
-    ```
-
-    - To run all tests on the develop built.
-    ```shell
-    npm run dev-e2e
-    ```
-
-    - To run all tests on the production built.
-    ```shell
-    npm run local-e2e
-    ```
-
-5.  **Storybook**
-
-    To start the storybook execute
-
-    ```shell
-    npm run storybook
-    ```
-
-    The storybook is now running at http://localhost:4006
+```
+content/          # Page content (Markdown front matter)
+layouts/
+  _default/       # Base templates
+  page/           # Page-specific layouts (home, docs, features, etc.)
+  partials/       # Reusable template fragments (header, footer, SVGs)
+assets/css/       # Tailwind CSS and custom styles
+static/           # Static assets (images, fonts, CNAME)
+data/examples/    # HCL code examples used on the docs page
+```
