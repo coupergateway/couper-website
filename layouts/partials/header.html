@@ -1,6 +1,6 @@
 <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-[0_5px_10px_0_#cbcbcb]" id="site-header">
-  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-2">
-    <div class="flex items-center justify-between h-[56px]">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="flex items-stretch justify-between h-[72px]">
       {{/* Logo */}}
       <a href="/" class="flex items-center gap-2 no-underline hover:no-underline flex-shrink-0" aria-label="Couper home">
         <span class="w-[32px] h-[36px] flex-shrink-0 [&>svg]:w-full [&>svg]:h-full">
@@ -10,13 +10,13 @@
       </a>
 
       {{/* Desktop Navigation */}}
-      <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+      <nav class="hidden lg:flex items-stretch gap-8" aria-label="Main navigation">
         {{ $currentPath := .RelPermalink }}
-        <a href="/use-cases/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/use-cases/" }}text-green{{ else }}text-black hover:text-green{{ end }}">Use Cases</a>
-        <a href="/features/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/features/" }}text-green{{ else }}text-black hover:text-green{{ end }}">Features</a>
-        <a href="/docs/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/docs/" }}text-green{{ else }}text-black hover:text-green{{ end }}">Docs</a>
-        <a href="/open-id-connect-gateway/" class="text-[15px] font-medium no-underline {{ if eq $currentPath "/open-id-connect-gateway/" }}text-green{{ else }}text-black hover:text-green{{ end }}">OIDC Gateway</a>
-        <a href="https://github.com/coupergateway/couper/" target="_blank" rel="noopener noreferrer" class="cta">
+        <a href="/use-cases/" class="nav-link text-[15px] font-medium{{ if eq $currentPath "/use-cases/" }} nav-link-active{{ end }}">Use Cases</a>
+        <a href="/features/" class="nav-link text-[15px] font-medium{{ if eq $currentPath "/features/" }} nav-link-active{{ end }}">Features</a>
+        <a href="/docs/" class="nav-link text-[15px] font-medium{{ if eq $currentPath "/docs/" }} nav-link-active{{ end }}">Docs</a>
+        <a href="/open-id-connect-gateway/" class="nav-link text-[15px] font-medium{{ if eq $currentPath "/open-id-connect-gateway/" }} nav-link-active{{ end }}">OIDC Gateway</a>
+        <a href="https://github.com/coupergateway/couper/" target="_blank" rel="noopener noreferrer" class="cta self-center">
           View on GitHub
           {{ partial "svg/icon-github.html" }}
         </a>
